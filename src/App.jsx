@@ -1,16 +1,21 @@
-import { useState } from 'react'
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './Home'
+import Store from './components/Store'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
 
   return (
     <>
-      
-      <div className='bg-red-400 '>new</div>
+    <div>new</div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Store" element={<Store />} />
+        </Routes>
+      </Router>
     </>
   )
 }
 
-export default App
+
