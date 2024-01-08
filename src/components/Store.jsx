@@ -2,7 +2,10 @@
 
 export default function Store () {
   return (
-    <div>Store</div>
+    <div>
+      <div>Store</div>
+    </div>
+    
   )
 }
 
