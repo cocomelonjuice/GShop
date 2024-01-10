@@ -6,7 +6,6 @@ export default function Home ()  {
     <div>
         <Navbar />
         <div className="bg-red-400 text-blue-600  ">Home for page</div>
-        
     </div>
     
   )
