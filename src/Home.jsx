@@ -5,7 +5,7 @@ export default function Home ()  {
   return (
     <div>
         <Navbar />
-        <div className="bg-red-400 text-blue-600  ">Home for page</div>
+        <div className="bg-teal-600  text-yellow-200 ">Home page</div>
     </div>
     
   )

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Home'
-import Store from './components/Store'
+import Cart from './components/Cart'
 import './App.css'
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={<Store />} />
+          <Route path="/Cart" element={<Cart />} />
         </Routes>
       </Router>
     </>
