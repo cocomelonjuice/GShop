@@ -5,7 +5,7 @@ import Dropdown from './components/Dropdown'
 export default function Home ()  {
   return (
     <div>
-        <Navbar />
+      <Navbar />
     </div>
     
   )
