@@ -33,7 +33,7 @@ export const productCoffee=[
     {
         name: "Coffee1",
         price: 30000,
-        image: "",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/1024px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
         amount: 1
     },
     {
