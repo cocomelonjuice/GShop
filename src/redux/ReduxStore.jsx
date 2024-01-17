@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { productCoffee, productIcecream, productJuice, productTea, productOthers } from "../ProductData"
+import { productList} from "../ProductData"
 
 const storeRedux = () => {
   return (

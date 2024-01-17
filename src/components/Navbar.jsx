@@ -10,38 +10,41 @@ export default function Navbar () {
 
   return (
     
-    <div className='flex flex-row justify-evenly bg-blue-800 text-white'>
+    <div className='fixed top-0 w-screen left-0 right-0 flex flex-row justify-evenly bg-blue-800 text-white '>
       <Link to="/"> 
-        <button className='w-12 h-12 '><img src={mainLogo}/></button>
+        <button className='w-12 h-12 mt-1 '><img src={mainLogo}/></button>
       </Link>
 
-      <button className='flex flex-col mr-24' onClick={()=>setOpen((prev)=>!prev)} >
-        <TfiAlignJustify size={28} className='m-auto' />
-        <div className='content-center '>Menu</div>
+      <button className='flex flex-col mr-24 mt-2' onClick={()=>setOpen((prev)=>!prev)} >
+        <TfiAlignJustify size={24} className='m-auto' />
+        <div className='content-center text-md '>Menu</div>
 
         {isOpen && <Dropdown />}
 
       </button>
 
-      <div className=" flex flex-row justify-evenly">
-        <input type="text" placeholder=' Search for drinks' className='border-2 border-black rounded '/>
-        <button>
+      <div className=" flex flex-row justify-evenly h-8 gap-2">
+        <input type="text" placeholder=' Search for drinks' className='w-46 border-2 border-black rounded mt-2.5 h-10'/>
+        <button className='mt-5'>
         <TfiSearch />
         </button>
       </div>
 
       
       <Link>
-        <div>
-          <TfiUser />
+        <div className="mt-3">
+          <TfiUser size={24}/>
         </div>
       </Link>
       
       <Link to="/Cart">
-        <div>
-          <TfiShoppingCartFull />
+        <div className="mt-3">
+          <TfiShoppingCartFull size={28}/>
+
         </div>
       </Link>
+
+
     </div>
   )
 }
