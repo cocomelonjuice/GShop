@@ -4,7 +4,7 @@ export const productList =  [
         name: "Tea1",
         type: "Tea",
         price: 25000,
-        image: "",
+        image: "https://phuclong.com.vn/uploads/dish/6a3bbf6dac792d-mangcaudaxay.png",
         amount: 1
     },
     
@@ -12,21 +12,21 @@ export const productList =  [
         name: "Tea2",
         type: "Tea",
         price: 35000,
-        image: "",
+        image: "https://phuclong.com.vn/uploads/dish/4ce1825cbd1978-trasuamc.png",
         amount: 1
     },
     {
         name: "Tea3",
         type: "Tea",
         price: 50000,
-        image: "",
+        image: "https://phuclong.com.vn/uploads/dish/f48194a2a92877-luckytea.png",
         amount: 1
     },
     {
         name: "Tea4",
         type: "Tea",
         price: 55000,
-        image: "",
+        image: "https://phuclong.com.vn/uploads/dish/4d247cffb2c4d5-hngtrchanh.png",
         amount: 1
     },
 
@@ -34,28 +34,28 @@ export const productList =  [
         name: "Coffee1",
         type: "Coffee",
         price: 30000,
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/1024px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
+        image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-bac-xiu-1611605084?w=640&amp;type=o",
         amount: 1
     },
     {
         name: "Coffee2",
         type: "Coffee",
         price: 35000,
-        image: "",
+        image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-espresso-sua-da-1611605084?w=640&amp;type=o",
         amount: 1
     },
     {
         name: "Coffee3",
         type: "Coffee",
         price: 40000,
-        image: "",
+        image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-espresso-da-1611605085?w=640&amp;type=o",
         amount: 1
     },
     {
         name: "Coffee4",
         type: "Coffee",
         price: 45000,
-        image: "",
+        image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-ice-latte-1611605085?w=640&amp;type=o",
         amount: 1
     },
 

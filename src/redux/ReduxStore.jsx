@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit"
-import { productList} from "../ProductData"
+import { configureStore } from "@reduxjs/toolkit";
+import cartSlice from "./features/Slice.jsx"
 
-const storeRedux = () => {
-  return (
-    <div>store</div>
-  )
-}
+export const store =  configureStore ({
+    reducer: {
+        cart: cartSlice,
+    },
+});

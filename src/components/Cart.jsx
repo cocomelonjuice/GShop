@@ -4,7 +4,7 @@ export default function Cart () {
   return (
     <div>
       <div><Navbar /></div>
-      <div>Cart</div>
+      <div className="mt-7 flex content-center justify-center">Your Cart is empty</div>
     </div>
     
   )

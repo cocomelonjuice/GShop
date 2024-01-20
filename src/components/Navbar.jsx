@@ -37,9 +37,11 @@ export default function Navbar () {
         </div>
       </Link>
       
+      {/* add logic: only show number of item in cart when item.length>0 , and when item.length>99, show 99+ to not overstretch the icon*/ }
       <Link to="/Cart">
-        <div className="mt-3">
+        <div className="relative  mt-3 ">
           <TfiShoppingCartFull size={28}/>
+          <div className="absolute  text-xs flex justify-center items-center animate-bounce -top-1 left-6 rounded-full w-5 h-5 bg-red-600 p-2.5 ">12</div>
 
         </div>
       </Link>
