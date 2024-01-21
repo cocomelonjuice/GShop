@@ -24,7 +24,7 @@ export default function Navbar () {
       </button>
 
       <div className=" flex flex-row justify-evenly h-8 gap-2">
-        <input type="text" placeholder=' Search for drinks' className='w-46 border-2 border-black rounded mt-2.5 h-10'/>
+        <input type="text" placeholder=' Search for drinks' className='w-80 border-2 border-black rounded mt-2.5 h-10'/>
         <button className='mt-5'>
         <TfiSearch />
         </button>
