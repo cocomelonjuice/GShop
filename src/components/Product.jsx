@@ -1,7 +1,7 @@
 import { increaseAmount,decreaseAmount,removeItem} from "../features/Slice";
 import {useSelector, useDispatch} from "react-redux";
 
-const product = ({item})=>{
+const Product = ({item})=>{
   const {cart} = useSelector((state)=>state);
   const dispatch = useDispatch();
 
@@ -32,11 +32,16 @@ const product = ({item})=>{
             <p>{item.price}</p>
         </div>
 
-        
+        <button>Remove</button>
+        <button>Add</button>
+        <button>+</button>
+        <button>-</button>
 
 
 
     </div>
   )
 }
+
+export default Product;
 

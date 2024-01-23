@@ -1,7 +1,20 @@
 import Navbar from "./Navbar";
-import { useState,useEffect } from "react";
+/*import CartItem from "./CartItem";
+import {useSelector, useDispatch} from "react-redux";
+import { updateTotal } from "../features/Slice";
+import { useState,useEffect } from "react";*/
 
-export default function Cart () {
+const Cart = () => {
+
+  /*const [totalAmount, setTotalAmount] = useState (0);
+  const {cart}=useSelector((state)=>state.cart);
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch(updateTotal())
+  },[cart, dispatch])*/
+
+
   return (
     <div>
       <div><Navbar /></div>
@@ -10,4 +23,6 @@ export default function Cart () {
     
   )
 }
+export default Cart;
 
+{/*đang tới đây, fix lỗi các dòng có comment: file Cart.jsx */}

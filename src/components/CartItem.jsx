@@ -1,6 +1,6 @@
-import React from 'react';
 import {useSelector, useDispatch} from "react-redux";
-import { increaseAmount,decreaseAmount, removeItem, updateTotal } from '../features/Slice';
+
+//import { increaseAmount,decreaseAmount, removeItem, updateTotal } from '../features/Slice';
 
 const CartItem = ({item}) => {
 
