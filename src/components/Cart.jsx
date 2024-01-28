@@ -2,15 +2,15 @@ import Navbar from "./Navbar.jsx";
 import CartItem from "./CartItem.jsx";
 import {useSelector} from "react-redux";
 //import { updateTotal } from "../features/Slice";
-import { useState,useEffect } from "react";
+import React, { useState,useEffect } from "react";
 
 const Cart = () => {
 
   const [totalAmount, setTotalAmount] = useState (0);
-  const {cart}=useSelector((state)=>state.cart);
+  const {cart}=useSelector((state)=>state);
 
   useEffect(()=>{
-    setTotalAmount(cart.reduce((acc, curr)=>acc+ curr.price, 0));
+    setTotalAmount(cart?.reduce((acc, curr)=>acc+ curr.price, 0));
   }, [cart]);
 
   return (
