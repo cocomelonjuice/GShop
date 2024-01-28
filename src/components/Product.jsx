@@ -1,6 +1,6 @@
 import React from "react";
 import { add } from "../features/Slice";
-//import {useSelector, useDispatch} from "react-redux";
+import {useSelector, useDispatch} from "react-redux";
 
 const Product = ({item})=>{
   const {cart} = useSelector((state)=>state);

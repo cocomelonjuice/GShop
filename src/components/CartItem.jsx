@@ -13,7 +13,7 @@ const CartItem = ({item}) => {
 
   return (
     <div>
-      <div>{item.image}</div>
+      <img src={item.image} />
       <div>{item.title}</div>
       <div>{item.price}</div>
       <button onClick={removeItemFromCart}>Delete</button>
@@ -23,4 +23,4 @@ const CartItem = ({item}) => {
   )
 }
 
-export default CartItem
+export default CartItem;
