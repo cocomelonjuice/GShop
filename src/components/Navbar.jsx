@@ -43,7 +43,10 @@ export default function Navbar () {
       <Link to="/Cart">
         <div className="relative  mt-3 ">
           <TfiShoppingCartFull size={28}/>
-          <div className="absolute  text-xs flex justify-center items-center animate-bounce -top-1 left-6 rounded-full w-5 h-5 bg-red-600 p-2.5 ">{cart.length}</div>
+          {cart.length > 0 && (
+            <div className="absolute  text-xs flex justify-center items-center animate-bounce -top-1 left-6 rounded-full w-5 h-5 bg-red-600 p-2.5 ">{cart.length}</div>
+          )}
+          
 
         </div>
       </Link>
