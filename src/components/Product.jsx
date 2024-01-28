@@ -32,7 +32,7 @@ const Product = ({item})=>{
             <p>{item.price}</p>
         </div>
 
-        <button onClick={addToCart}>Add</button>
+        <button onClick={addToCart}>Add to Cart</button>
 
         {/*<button>Remove</button>
         <button>+</button>

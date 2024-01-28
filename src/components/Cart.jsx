@@ -16,7 +16,7 @@ const Cart = () => {
   return (
     <div>
       <div><Navbar /></div>
-      {cart.length>0 ? (
+      { cart.length > 0 ? (
         <div>
           {cart.map((item) => {
                 return <CartItem key={item.id} item={item} />;

@@ -7,7 +7,7 @@ import {useSelector} from "react-redux";
 
 
 export default function Navbar () {
-  const {cart}= useSelector((state)=>state)
+  const {cart}= useSelector((state)=>state);
   const [isOpen,setOpen] = useState(false);
   
   return (
