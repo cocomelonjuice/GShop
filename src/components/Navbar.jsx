@@ -3,16 +3,16 @@ import {Link} from "react-router-dom"
 import { TfiAlignJustify, TfiSearch, TfiUser, TfiShoppingCartFull  } from "react-icons/tfi";
 import { useState } from 'react';
 import Dropdown from './Dropdown';
-/*import {useSelector} from "react-redux";*/
+import {useSelector} from "react-redux";
 
 
 export default function Navbar () {
-  /*const {cart}= useSelector((state)=>state)*/
+  const {cart}= useSelector((state)=>state)
   const [isOpen,setOpen] = useState(false);
   
   return (
     
-    <div className='fixed top-0 w-screen left-0 right-0 flex flex-row justify-evenly bg-blue-800 text-white '>
+    <div className='fixed top-0 w-screen left-0 right-0 flex flex-row justify-evenly bg-blue-800 text-white'>
       <Link to="/"> 
         <button className='w-12 h-12 mt-1 '><img src={mainLogo}/></button>
       </Link>
@@ -26,7 +26,7 @@ export default function Navbar () {
       </button>
 
       <div className=" flex flex-row justify-evenly h-8 gap-2">
-        <input type="text" placeholder=' Search for drinks' className='w-80 border-2 border-black rounded mt-2.5 h-10'/>
+        <input type="text" placeholder=' Search for drinks' className='w-80 border-2 border-black rounded mt-2.5 h-10 text-black p-1'/>
         <button className='mt-5'>
         <TfiSearch />
         </button>
@@ -43,7 +43,7 @@ export default function Navbar () {
       <Link to="/Cart">
         <div className="relative  mt-3 ">
           <TfiShoppingCartFull size={28}/>
-          <div className="absolute  text-xs flex justify-center items-center animate-bounce -top-1 left-6 rounded-full w-5 h-5 bg-red-600 p-2.5 ">12</div>
+          <div className="absolute  text-xs flex justify-center items-center animate-bounce -top-1 left-6 rounded-full w-5 h-5 bg-red-600 p-2.5 ">{cart.length}</div>
 
         </div>
       </Link>
