@@ -3,11 +3,13 @@ import {Link} from "react-router-dom"
 import { TfiAlignJustify, TfiSearch, TfiUser, TfiShoppingCartFull  } from "react-icons/tfi";
 import { useState } from 'react';
 import Dropdown from './Dropdown';
+/*import {useSelector} from "react-redux";*/
 
 
 export default function Navbar () {
+  /*const {cart}= useSelector((state)=>state)*/
   const [isOpen,setOpen] = useState(false);
-
+  
   return (
     
     <div className='fixed top-0 w-screen left-0 right-0 flex flex-row justify-evenly bg-blue-800 text-white '>
