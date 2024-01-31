@@ -11,9 +11,7 @@ export default function Home ()  {
       <div>{productList.map((item)=>{
         return <Product key={item.id} item={item} />
       })}</div>
-      {/*<div>{productList.map((item)=>{
-        return <Product key={item.id} item={item}></Product>
-      })}</div>*/}
+      
     </div>
     
   )
