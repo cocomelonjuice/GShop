@@ -1,7 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice} from "@reduxjs/toolkit"
 //import { productList } from "../ProductData"
 
-const initialState = [];
+const initialState ={
+    choosenItems :[],
+    amount: 0,
+    total: 0
+};
 
 const cartSlice =  createSlice ({
     name: "cart",
@@ -9,10 +13,10 @@ const cartSlice =  createSlice ({
     reducers: {
 
         add(state,action){
-            state.push(action.payload);
+            state.choosenItems.push(action.payload);
         },
         remove(state,action){
-            return state.filter((item)=>item.id!=action.payload);
+            return state.choosenItems.filter((item)=>item.id!=action.payload);
         }
         /*increaseAmount: (state, {payload})=>{
             const item = state.products.find (item=>item.name===payload.name);

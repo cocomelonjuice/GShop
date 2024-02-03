@@ -4,10 +4,11 @@ import { TfiAlignJustify, TfiSearch, TfiUser, TfiShoppingCartFull  } from "react
 import { useState } from 'react';
 import Dropdown from './Dropdown';
 import {useSelector} from "react-redux";
-
+import {store} from "../redux/ReduxStore"
 
 export default function Navbar () {
-  const {cart}= useSelector((state)=>state);
+  //const {cart}= useSelector((state)=>state);
+  const {choosenItems}=useSelector((state)=>state.cart)
   const [isOpen,setOpen] = useState(false);
   
   return (
@@ -43,8 +44,8 @@ export default function Navbar () {
       <Link to="/Cart">
         <div className="relative  mt-3 ">
           <TfiShoppingCartFull size={28}/>
-          {cart.length > 0 && (
-            <div className="absolute  text-xs flex justify-center items-center animate-bounce -top-1 left-6 rounded-full w-5 h-5 bg-red-600 p-2.5 ">{cart.length}</div>
+          {choosenItems?.length > 0 && (
+            <div className="absolute  text-xs flex justify-center items-center animate-bounce -top-1 left-6 rounded-full w-5 h-5 bg-red-600 p-2.5 ">{/*{cart.length}*/}{choosenItems.length}</div>
           )}
           
 
