@@ -23,7 +23,7 @@ const Cart = () => {
   return (
     <div>
       <div><Navbar /></div>
-      { choosenItems.length > 0 ? (
+      { choosenItems?.length > 0 ? (
         <div>
           {choosenItems.map((item) => {
                 return <CartItem key={item.id} item={item} />;

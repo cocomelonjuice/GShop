@@ -16,7 +16,8 @@ const cartSlice =  createSlice ({
             state.choosenItems.push(action.payload);
         },
         remove(state,action){
-            return state.choosenItems.filter((item)=>item.id!=action.payload);
+            //return state.choosenItems.filter((item)=>item.id!=action.payload);
+            state.choosenItems = state.choosenItems.filter((item)=>item.id!=action.payload);
         }
         /*increaseAmount: (state, {payload})=>{
             const item = state.products.find (item=>item.name===payload.name);
