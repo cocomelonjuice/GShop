@@ -1,9 +1,12 @@
 import React from "react";
-import { add } from "../features/Slice";
+import { add} from "../features/Slice";
 import {useSelector, useDispatch} from "react-redux";
+import {store} from "../redux/ReduxStore";
 
 const Product = ({item})=>{
   const {cart} = useSelector((state)=>state);
+
+  //const {choosenItems}=useSelector((state)=>state.cart)
   const dispatch = useDispatch();
 
   const addToCart = ()=>{

@@ -3,8 +3,10 @@ import { createSlice} from "@reduxjs/toolkit"
 
 const initialState ={
     choosenItems :[],
-    amount: 0,
-    total: 0
+    //amount: 0,
+    //total: 0
+    
+    
 };
 
 const cartSlice =  createSlice ({
@@ -12,13 +14,40 @@ const cartSlice =  createSlice ({
     initialState,
     reducers: {
 
+        //check phút 8:00 vidoeo 9/13 cho function add
+
         add(state,action){
-            state.choosenItems.push(action.payload);
+
+            const isExist = state.choosenItems.find(item=>item.id==action.payload?.id)
+            if (isExist){
+                isExist.sum+=action.payload?.price;
+                isExist.qty+=1;
+            }else{
+                //state.choosenItems.push(action.payload);
+                state.choosenItems.push({...action.payload,
+                sum: action.payload?.price,
+            qty: 1});
+            }
+
         },
-        remove(state,action){
-            //return state.choosenItems.filter((item)=>item.id!=action.payload);
+        /*remove(state,action){
             state.choosenItems = state.choosenItems.filter((item)=>item.id!=action.payload);
+        },*/
+
+        remove(state,action){
+            const isExist = state.choosenItems.find(item=>item.id==action.payload?.id)
+            if(isExist && isExist.qty!=1){
+                isExist.qty-=1;
+                isExist.sum-=action.payload.price;
+            }else{
+                state.choosenItems = state.choosenItems.filter((item)=>item.id!=action.payload.id);
+            }
+
         }
+     
+
+
+
         /*increaseAmount: (state, {payload})=>{
             const item = state.products.find (item=>item.name===payload.name);
             item.amount++;

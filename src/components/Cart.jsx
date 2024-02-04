@@ -15,7 +15,8 @@ const Cart = () => {
     setTotalAmount(choosen?.reduce((acc, curr)=>acc+ curr.price, 0));
   }, [cart]);*/
   useEffect(()=>{
-    setTotalAmount(choosenItems?.reduce((acc, curr)=>acc+ curr.price, 0));
+    //setTotalAmount(choosenItems?.reduce((acc, curr)=>acc+ curr.price, 0));
+    setTotalAmount(choosenItems?.reduce((acc, curr)=>acc+ curr.sum, 0));
   }, [choosenItems]);
 
   
@@ -28,8 +29,9 @@ const Cart = () => {
           {choosenItems.map((item) => {
                 return <CartItem key={item.id} item={item} />;
               })}
-              <div>YOUR CART</div>
-              <div>Total: {choosenItems.length}</div>
+              <br />
+              <div>-------------------YOUR CART----------------</div>
+              <div>Total Item: {choosenItems.length}</div>
               <div>Total Amount: {totalAmount}</div>
               <button>CHECKOUT</button>
         </div>
