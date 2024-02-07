@@ -32,7 +32,7 @@ const Cart = () => {
               <br />
               <div>-------------------YOUR CART----------------</div>
               <div>Total Item: {choosenItems.length}</div>
-              <div>Total Amount: {totalAmount}</div>
+              <div>Total Amount: {totalAmount||0}</div>
               <button>CHECKOUT</button>
         </div>
       ):(

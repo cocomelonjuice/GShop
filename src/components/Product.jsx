@@ -2,6 +2,7 @@ import React from "react";
 import { add} from "../features/Slice";
 import {useSelector, useDispatch} from "react-redux";
 import {store} from "../redux/ReduxStore";
+import CartItem from "./CartItem";
 
 const Product = ({item})=>{
   const {cart} = useSelector((state)=>state);

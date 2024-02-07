@@ -30,12 +30,8 @@ const cartSlice =  createSlice ({
             }
 
         },
-        /*remove(state,action){
-            state.choosenItems = state.choosenItems.filter((item)=>item.id!=action.payload);
-        },*/
-
-        remove(state,action){
-            const isExist = state.choosenItems.find(item=>item.id==action.payload?.id)
+        /* remove(state,action){
+            const isExist = state.choosenItems.find(item=>item.id==action.payload.id)
             if(isExist && isExist.qty!=1){
                 isExist.qty-=1;
                 isExist.sum-=action.payload.price;
@@ -43,11 +39,13 @@ const cartSlice =  createSlice ({
                 state.choosenItems = state.choosenItems.filter((item)=>item.id!=action.payload.id);
             }
 
-        }
-     
+        }*/
 
-
-
+        remove(state,action){
+            state.choosenItems = state.choosenItems.filter((item)=>item.id!=action.payload);
+        },
+       
+  
         /*increaseAmount: (state, {payload})=>{
             const item = state.products.find (item=>item.name===payload.name);
             item.amount++;
