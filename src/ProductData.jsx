@@ -1,21 +1,22 @@
 
 export const productList =  [
     {
+        id: 1,
         name: "Tea1",
         type: "Tea",
         price: 25000,
         image: "https://phuclong.com.vn/uploads/dish/6a3bbf6dac792d-mangcaudaxay.png",
         qty: 1,
-        id: 1
+        
     },
     
-    {
+    {   id: 2,
         name: "Tea2",
         type: "Tea",
         price: 35000,
         image: "https://phuclong.com.vn/uploads/dish/4ce1825cbd1978-trasuamc.png",
         qty: 1,
-        id: 2
+        
     },
     {
         name: "Tea3",

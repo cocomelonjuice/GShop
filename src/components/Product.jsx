@@ -6,22 +6,11 @@ import CartItem from "./CartItem";
 
 const Product = ({item})=>{
   const {cart} = useSelector((state)=>state);
-
   //const {choosenItems}=useSelector((state)=>state.cart)
   const dispatch = useDispatch();
-
   const addToCart = ()=>{
     dispatch(add(item))
   }
-
-  /*const decrease = ()=>{
-    dispatch(decreaseAmount(item))
-  }
-
-  const remove = ()=>{
-    dispatch(removeItem(item))
-  }*/
-  
   return (
     <div>
         <div>
@@ -37,14 +26,8 @@ const Product = ({item})=>{
         </div>
 
         <button onClick={addToCart}>Add to Cart</button>
-
-        {/*<button>Remove</button>
-        <button>+</button>
-        <button>-</button>*/}
-
     </div>
   )
 }
-
 export default Product;
 

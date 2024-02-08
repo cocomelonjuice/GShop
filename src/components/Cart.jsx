@@ -6,7 +6,7 @@ import React, { useState,useEffect } from "react";
 import {store} from "../redux/ReduxStore"
 
 
-const Cart = () => {
+const Cart = ({item}) => {
 
   const [totalAmount, setTotalAmount] = useState (0);
   const {choosenItems}=useSelector((state)=>state.cart);
@@ -30,9 +30,10 @@ const Cart = () => {
                 return <CartItem key={item.id} item={item} />;
               })}
               <br />
+              <br />
               <div>-------------------YOUR CART----------------</div>
               <div>Total Item: {choosenItems.length}</div>
-              <div>Total Amount: {totalAmount||0}</div>
+              <div>Total Price: {totalAmount}</div>
               <button>CHECKOUT</button>
         </div>
       ):(

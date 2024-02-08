@@ -5,8 +5,6 @@ const initialState ={
     choosenItems :[],
     //amount: 0,
     //total: 0
-    
-    
 };
 
 const cartSlice =  createSlice ({
@@ -17,7 +15,6 @@ const cartSlice =  createSlice ({
         //check phút 8:00 vidoeo 9/13 cho function add
 
         add(state,action){
-
             const isExist = state.choosenItems.find(item=>item.id==action.payload?.id)
             if (isExist){
                 isExist.sum+=action.payload?.price;
@@ -28,24 +25,21 @@ const cartSlice =  createSlice ({
                 sum: action.payload?.price,
             qty: 1});
             }
-
         },
-        /* remove(state,action){
-            const isExist = state.choosenItems.find(item=>item.id==action.payload.id)
-            if(isExist && isExist.qty!=1){
-                isExist.qty-=1;
-                isExist.sum-=action.payload.price;
-            }else{
-                state.choosenItems = state.choosenItems.filter((item)=>item.id!=action.payload.id);
-            }
-
-        }*/
 
         remove(state,action){
+            const isExist = state.choosenItems.find(item=>item.id==action.payload?.id)
+            if(isExist && isExist.qty!=1){
+                isExist.qty-=1;
+                isExist.sum-=action.payload?.price;
+            }else{
+                state.choosenItems = state.choosenItems.filter((item)=>item.id!=action.payload);
+            }
+        }
+        /*remove(state,action){
             state.choosenItems = state.choosenItems.filter((item)=>item.id!=action.payload);
-        },
-       
-  
+        },*/
+
         /*increaseAmount: (state, {payload})=>{
             const item = state.products.find (item=>item.name===payload.name);
             item.amount++;
@@ -69,11 +63,8 @@ const cartSlice =  createSlice ({
             });
             state.amount =  amount;
             state.total = total;
-
         }*/
     }
-
 })
-
 export const {add,remove} =cartSlice.actions;
 export default cartSlice.reducer;

@@ -1,4 +1,3 @@
-
 import React from "react";
 import {useSelector, useDispatch} from "react-redux";
 import { add,remove } from "../features/Slice";
@@ -25,9 +24,9 @@ const CartItem = ({item}) => {
   
 
   return (
-    <div>
+    <div key={item.id}>
       <img src={item.image} />
-      <div>{item.title}</div>
+      <div>{item.name}</div>
       <div>{item.price}</div>
 
       <button onClick={()=>dispatch(remove(item.id))}>- or Delete</button>
