@@ -26,13 +26,13 @@ export default function Navbar () {
 
       </button>
 
-      <div className=" flex flex-row justify-evenly h-8 gap-2">
+      <div className=" flex flex-row relative justify-evenly h-8 gap-2">
         <input type="text" placeholder=' Search for drinks' className='w-80 border-2 border-black rounded mt-2.5 h-10 text-black p-1'/>
-        <button className='mt-5'>
+        <button className='mt-5 absolute right-0 top-0 mr-2  text-black font-bold   w-5 h-5 content-center p-0.5'>
         <TfiSearch />
         </button>
       </div>
-
+ 
       
       <Link>
         <div className="mt-3">

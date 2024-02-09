@@ -28,12 +28,12 @@ const cartSlice =  createSlice ({
         },
 
         remove(state,action){
-            const isExist = state.choosenItems.find(item=>item.id==action.payload?.id)
+            const isExist = state.choosenItems.find((item)=>item.id==action.payload?.id)
             if(isExist && isExist.qty!=1){
                 isExist.qty-=1;
                 isExist.sum-=action.payload?.price;
             }else{
-                state.choosenItems = state.choosenItems.filter((item)=>item.id!=action.payload);
+                state.choosenItems = state.choosenItems.filter((item)=>item.id!==action.payload);
             }
         }
         /*remove(state,action){

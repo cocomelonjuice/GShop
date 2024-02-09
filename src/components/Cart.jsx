@@ -11,15 +11,10 @@ const Cart = ({item}) => {
   const [totalAmount, setTotalAmount] = useState (0);
   const {choosenItems}=useSelector((state)=>state.cart);
 
-  /*useEffect(()=>{
-    setTotalAmount(choosen?.reduce((acc, curr)=>acc+ curr.price, 0));
-  }, [cart]);*/
   useEffect(()=>{
-    //setTotalAmount(choosenItems?.reduce((acc, curr)=>acc+ curr.price, 0));
     setTotalAmount(choosenItems?.reduce((acc, curr)=>acc+ curr.sum, 0));
   }, [choosenItems]);
 
-  
 
   return (
     <div>
