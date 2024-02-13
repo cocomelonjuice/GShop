@@ -5,7 +5,11 @@ import {store} from "../redux/ReduxStore";
 import CartItem from "./CartItem";
 
 const Product = ({item})=>{
-  const {cart} = useSelector((state)=>state);
+  const {cart} = useSelector((state)=>state.cart);
+
+  
+  //const {cart} = useSelector((state)=>state);
+
   //const {choosenItems}=useSelector((state)=>state.cart)
   const dispatch = useDispatch();
   const addToCart = ()=>{

@@ -37,7 +37,7 @@ export default function Navbar () {
       */}
 
       <div className='w-80 border-2 border-black rounded mt-2.5 h-10 text-black p-1'>
-        {<Searchbar></Searchbar>}
+        {<Searchbar></Searchbar>} 
       </div>
 
 
