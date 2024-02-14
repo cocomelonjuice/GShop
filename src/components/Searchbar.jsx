@@ -4,7 +4,7 @@ import { productList } from '../ProductData';
 
 //cần intergrate SearchBar component này vào Navbar( thay thế hardcoded searchbar đang ở trên Navbar)
 //SearchBar có dạng dropdown list ( drop down từ thanh search, không cần hiển thị list filter này ở component khác ?)
-const Searchbar = () => {
+/*const Searchbar = () => {
   const [search,setSearch] = useState('');
   console.log(search);
   return (
@@ -35,11 +35,11 @@ const Searchbar = () => {
       <td>{item.price}</td>
     </tr>
   })
-}*/
+}
 
-export default Searchbar;
+export default Searchbar;*/
 
-/*
+
 export default function FilterableList() {
   const [query, setQuery] = useState("");
   const results = filterItems(productList, query);
@@ -52,7 +52,9 @@ export default function FilterableList() {
     <>
       <SearchBar query={query} onChange={handleChange} />
       <hr />
-      <List items={results} />
+      {query!=="" && (
+      <List items={results} />)}
+      
     </>
   );
 }
@@ -85,4 +87,4 @@ function List({ items }) {
       </tbody>
     </table>
   );
-} */
+} 

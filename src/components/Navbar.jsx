@@ -6,7 +6,7 @@ import Dropdown from './Dropdown';
 import {useSelector} from "react-redux";
 import {store} from "../redux/ReduxStore"
 
-import Searchbar from './Searchbar';
+import FilterableList from "./Searchbar"
 
 export default function Navbar () {
   //const {cart}= useSelector((state)=>state);
@@ -37,7 +37,7 @@ export default function Navbar () {
       */}
 
       <div className='w-80 border-2 border-black rounded mt-2.5 h-10 text-black p-1'>
-        {<Searchbar></Searchbar>} 
+        {<FilterableList></FilterableList>}
       </div>
 
 
