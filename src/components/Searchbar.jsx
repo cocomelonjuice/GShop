@@ -50,7 +50,7 @@ export default function FilterableList() {
 
   return (
     <>
-      <SearchBar query={query} onChange={handleChange} />
+      <SearchBar query={query} onChange={handleChange}  />
       <hr />
       {query!=="" && (
       <List items={results} />)}
@@ -62,7 +62,7 @@ export default function FilterableList() {
 function SearchBar({ query, onChange }) {
   return (
     <label>
-      Search: <input value={query} onChange={onChange} />
+      <input value={query} onChange={onChange} placeholder='Search for drinks' className='w-80 border-2 border-black rounded mt-2.5 h-10 text-black p-1'/>
     </label>
   );
 }

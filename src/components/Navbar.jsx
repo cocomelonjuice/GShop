@@ -33,12 +33,17 @@ export default function Navbar () {
         <button className='mt-5 absolute right-0 top-0 mr-2  text-black font-bold   w-5 h-5 content-center p-0.5'>
         <TfiSearch />
         </button>
-      </div>
-      */}
+      </div>*/}
+      
 
-      <div className='w-80 border-2 border-black rounded mt-2.5 h-10 text-black p-1'>
-        {<FilterableList></FilterableList>}
+      
+      <div className=" flex flex-row relative justify-evenly h-8 gap-2">
+      {<FilterableList ></FilterableList>}
+        <button className='mt-5 absolute right-0 top-0 mr-2  text-black font-bold   w-5 h-5 content-center p-0.5'>
+        <TfiSearch />
+        </button>
       </div>
+        
 
 
       
