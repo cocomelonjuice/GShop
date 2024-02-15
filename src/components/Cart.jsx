@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 
 const Cart = ({item}) => {
 
-  const {choosenItems}=useSelector((state)=>state.cart);
+  const {cart,choosenItems, cartTotalAmount}=useSelector((state)=>state.cart);
   const {cartTotalQuantity} = useSelector((state)=>state.cart)
 
 
@@ -31,7 +31,7 @@ const Cart = ({item}) => {
               <div>-------------------YOUR CART----------------</div>
               <div>Total Distinct Item: {choosenItems.length}</div>
               <div>Cart total quantity: {cartTotalQuantity}</div>
-              <div>Total Price:$ {choosenItems.cartTotalAmount}</div>
+              <div>Sub Total Price:$ {cartTotalAmount}</div>
               <button>CHECKOUT</button>
         </div>
       ):(

@@ -7,3 +7,4 @@ export const store =  configureStore ({
     },
 });
 
+//store.dispatch(getTotals());
