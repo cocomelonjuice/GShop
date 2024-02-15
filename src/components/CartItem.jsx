@@ -1,41 +1,37 @@
 import React from "react";
 import {useSelector, useDispatch} from "react-redux";
-import { add,remove } from "../features/Slice";
-//import { increaseAmount,decreaseAmount, removeItem, updateTotal } from '../features/Slice';
+import { add,removeFromCart,decreaseCart,getTotals} from "../features/Slice";
 import {store} from "../redux/ReduxStore"
 
 
 
 const CartItem = ({item}) => {
   
-  //const {cart} = useSelector ((state)=>state);
   const {choosenItems} = useSelector ((state)=>state.cart);
   const dispatch = useDispatch();
-  /*const removeItemFromCart = ()=>{
-    dispatch(remove(item.id));
-  }*/
-  /*const increaseItem = (item)=>{
-    dispatch(add(item));
-  }*/
-
   
-  /*let totalItems = 0;
-  for (const item of choosenItems) {
-    totalItems += item.qty;
-  }*/
-
-
+  const handleAddToCart = (item)=>{
+    dispatch(add(item));
+  };
+  const handleDecreaseCart = (item) => {
+    dispatch(decreaseCart(item));
+  };
+  const handleRemoveFromCart = (item) => {
+    dispatch(removeFromCart(item));
+  };
+  
   return (
     <div key={item.id}>
       <img src={item.image} />
       <div>{item.name}</div>
       <div>{item.price}</div>
-      <button onClick={()=>dispatch(remove(item.id))}>- or Delete</button>
       <br />
-      <button onClick={()=>dispatch(add(item.id))}>+</button>
-      <div>Quantity {item.qty}</div>
+      <button onClick={()=>handleAddToCart(item)}>+</button>
+      <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
+      <button onClick={() => handleDecreaseCart(item)}>-</button>
+      <div>Quantity {item.cartQuantity}</div>
+      <div>${item.price * item.cartQuantity}</div>
     </div>   
   )
 }
-
 export default CartItem;

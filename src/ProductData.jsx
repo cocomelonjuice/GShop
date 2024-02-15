@@ -6,7 +6,7 @@ export const productList =  [
         type: "Tea",
         price: 25000,
         image: "https://phuclong.com.vn/uploads/dish/6a3bbf6dac792d-mangcaudaxay.png",
-       // qty: 1,
+       qty: 1,
         
     },
     
@@ -15,7 +15,7 @@ export const productList =  [
         type: "Tea",
         price: 35000,
         image: "https://phuclong.com.vn/uploads/dish/4ce1825cbd1978-trasuamc.png",
-        //qty: 1,
+        qty: 1,
         
     },
     {
@@ -23,7 +23,7 @@ export const productList =  [
         type: "Tea",
         price: 50000,
         image: "https://phuclong.com.vn/uploads/dish/f48194a2a92877-luckytea.png",
-       //qty: 1,
+       qty: 1,
         id: 3
     },
     {
@@ -31,7 +31,7 @@ export const productList =  [
         type: "Tea",
         price: 55000,
         image: "https://phuclong.com.vn/uploads/dish/4d247cffb2c4d5-hngtrchanh.png",
-        //qty: 1,
+        qty: 1,
         id: 4
     },
 
@@ -40,7 +40,7 @@ export const productList =  [
         type: "Coffee",
         price: 30000,
         image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-bac-xiu-1611605084?w=640&amp;type=o",
-        //qty: 1,
+        qty: 1,
         id: 5
     },
     {
@@ -48,7 +48,7 @@ export const productList =  [
         type: "Coffee",
         price: 35000,
         image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-espresso-sua-da-1611605084?w=640&amp;type=o",
-        //qty: 1,
+        qty: 1,
         id: 6
     },
     {
@@ -56,7 +56,7 @@ export const productList =  [
         type: "Coffee",
         price: 40000,
         image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-espresso-da-1611605085?w=640&amp;type=o",
-        //qty: 1,
+        qty: 1,
         id: 7
     },
     {
@@ -64,7 +64,7 @@ export const productList =  [
         type: "Coffee",
         price: 45000,
         image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-ice-latte-1611605085?w=640&amp;type=o",
-        //qty: 1,
+        qty: 1,
         id: 8
     },
 
@@ -76,7 +76,7 @@ export const productList =  [
         type: "Juice",
         price: 55000,
         image: "",
-        //qty: 1,
+        qty: 1,
         id: 9
     },
 
@@ -88,7 +88,7 @@ export const productList =  [
         type: "Icecream",
         price: 55000,
         image: "",
-        //qty: 1,
+        qty: 1,
         id: 10
     },
 
@@ -99,7 +99,7 @@ export const productList =  [
         type: "other",
         price: 55000,
         image: "",
-        //qty: 1,
+        qty: 1,
         id: 11
     }
 ]

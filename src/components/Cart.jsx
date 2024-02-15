@@ -1,20 +1,22 @@
 import Navbar from "./Navbar.jsx";
 import CartItem from "./CartItem.jsx";
 import {useSelector} from "react-redux";
-//import { updateTotal } from "../features/Slice";
 import React, { useState,useEffect } from "react";
 import {store} from "../redux/ReduxStore"
-
+import { add,removeFromCart,decreaseCart, getTotals } from "../features/Slice.jsx";
+import { useDispatch } from "react-redux";
 
 const Cart = ({item}) => {
 
-  const [totalAmount, setTotalAmount] = useState (0);
   const {choosenItems}=useSelector((state)=>state.cart);
+  const {cartTotalQuantity} = useSelector((state)=>state.cart)
 
-  useEffect(()=>{
-    setTotalAmount(choosenItems?.reduce((acc, curr)=>acc+ curr.sum, 0));
-  }, [choosenItems]);
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [choosenItems, dispatch]);
 
   return (
     <div>
@@ -27,16 +29,15 @@ const Cart = ({item}) => {
               <br />
               <br />
               <div>-------------------YOUR CART----------------</div>
-              <div>Total Item: {choosenItems.length}</div>
-              <div>Total Price: {totalAmount}</div>
+              <div>Total Distinct Item: {choosenItems.length}</div>
+              <div>Cart total quantity: {cartTotalQuantity}</div>
+              <div>Total Price:$ {choosenItems.cartTotalAmount}</div>
               <button>CHECKOUT</button>
         </div>
       ):(
         <div className="mt-7 flex content-center justify-center">Your Cart is empty</div>
       )}
-      
     </div>
-    
   )
 }
 export default Cart;
