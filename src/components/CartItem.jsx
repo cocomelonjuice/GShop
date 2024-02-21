@@ -26,9 +26,9 @@ const CartItem = ({item}) => {
       <div>{item.name}</div>
       <div>{item.price}</div>
       <br />
-      <button onClick={()=>handleAddToCart(item)}>+</button>
-      <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
-      <button onClick={() => handleDecreaseCart(item)}>-</button>
+      <button onClick={()=>handleAddToCart(item)} className="rounded-full border-red-600 border-2 bg-red-600 text-white px-1 hover:bg-red-400">+</button>
+      <button onClick={() => handleRemoveFromCart(item) } className="rounded-full border-red-600 border-2 bg-red-600 text-white px-1 hover:bg-red-400">Remove</button>
+      <button onClick={() => handleDecreaseCart(item)} className="rounded-full border-red-600 border-2 bg-red-600 text-white px-1 hover:bg-red-400">-</button>
       <div>Quantity {item.cartQuantity}</div>
       <div>${item.price * item.cartQuantity}</div>
     </div>   

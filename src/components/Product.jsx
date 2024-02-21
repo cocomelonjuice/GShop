@@ -13,7 +13,7 @@ const Product = ({item})=>{
   }
   return (
     <div>
-        <div>
+        <div className="rouned-md border-8 border-red-400 bg-teal-600">
             <img src={item.image} />
         </div>
 
@@ -25,7 +25,7 @@ const Product = ({item})=>{
             <p>{item.price}</p>
         </div>
 
-        <button onClick={addToCart}>Add to Cart</button>
+        <button onClick={addToCart} className=" rounded-full border-red-600 border-2 bg-red-600 text-white px-1 hover:bg-red-400 ">Add to Cart</button>
     </div>
   )
 }

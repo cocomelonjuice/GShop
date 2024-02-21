@@ -9,7 +9,7 @@ export default function Home ()  {
   return (
     <div>
       <Navbar />
-      <div>{productList.map((item)=>{
+      <div className="flex-wrap flex items-center flex-col ">{productList.map((item)=>{
         return <Product key={item.id} item={item} />
       })}</div>
       <Footer />
