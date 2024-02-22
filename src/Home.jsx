@@ -7,7 +7,7 @@ import Footer from './components/Footer'
 
 export default function Home ()  {
   return (
-    <div>
+    <div className="bg-gray-200 " >
       <Navbar />
       <div className="flex-wrap flex items-center flex-col ">{productList.map((item)=>{
         return <Product key={item.id} item={item} />
