@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Dropdown from './Dropdown';
 import {useSelector} from "react-redux";
 import {store} from "../redux/ReduxStore"
+import LoginForm from '../authentication/LoginForm';
 
 import FilterableList from "./Searchbar"
 
@@ -45,9 +46,9 @@ export default function Navbar () {
       </div>
         
 
-
+ 
       
-      <Link>
+      <Link to="../LoginForm">
         <div className="mt-3">
           <TfiUser size={24}/>
         </div>
