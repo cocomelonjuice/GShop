@@ -48,7 +48,7 @@ export default function Navbar () {
 
  
       
-      <Link to="../LoginForm">
+      <Link to="/authentication/LoginForm">
         <div className="mt-3">
           <TfiUser size={24}/>
         </div>
