@@ -1,4 +1,4 @@
-import mainLogo from '../assets/image/ShopG_image.png'
+import mainLogo from "../assets/image/ShopG_image.PNG"
 import {Link} from "react-router-dom"
 import { TfiAlignJustify, TfiSearch, TfiUser, TfiShoppingCartFull  } from "react-icons/tfi";
 import { useState } from 'react';
