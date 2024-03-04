@@ -6,11 +6,16 @@ import Coffee from './components/Coffee'
 import LoginForm from './authentication/LoginForm'
 import './App.css'
 
+import { QueryClient, useQuery, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient()
+
 export default function App() {
 
   return (
     <>
-      <Router>
+        <QueryClientProvider client={queryClient}>
+        <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Cart" element={<Cart />} />
@@ -18,6 +23,10 @@ export default function App() {
           <Route path="/authentication/LoginForm" element={<LoginForm />} />
         </Routes>
       </Router>
+        </QueryClientProvider>
+
+
+      
     </>
   )
 }

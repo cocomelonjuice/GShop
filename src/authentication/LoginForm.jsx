@@ -1,11 +1,13 @@
 import React from 'react'
 import { useState } from 'react';
-import { login } from '../services/apiAuth';
+import { useLogin } from './useLogin';
 
 const LoginForm = () => {
 
-  const[email,setEmail]=useState("");
-  const [password,setPassword]=useState("");
+  const[email,setEmail]=useState("tienminh@example.com");
+  const [password,setPassword]=useState("12345678");
+
+  const {login, isLoading}=useLogin()
 
   function handleSubmit (e){
     e.preventDefault();
@@ -23,15 +25,15 @@ const LoginForm = () => {
            
             <div className='flex flex-row m-auto gap-4'>
                 <h1>Username</h1>
-                <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Your name"  className='text-gray-600 italic border-gray-400 border-2 rounded-md '/>
+                <input type="email" value={email} disabled={isLoading} onChange={(e)=>setEmail(e.target.value)} placeholder="Your name"  className='text-gray-600 italic border-gray-400 border-2 rounded-md '/>
             </div>
 
             <div className='flex flex-row m-auto gap-5'>
                 <h1>Password</h1>
-                <input type="password" value ={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Your password" className="text-gray-600 italic  border-gray-400 border-2  rounded-md" />
+                <input type="password" value ={password} disabled={isLoading} onChange={(e)=>setPassword(e.target.value)} placeholder="Your password" className="text-gray-600 italic  border-gray-400 border-2  rounded-md" />
             </div>
           
-            <button stype="submit" className='text-white bg-purple-500 max-w-fit m-auto p-1 rounded-md mt-4'>Login</button>
+            <button stype="submit" disabled={isLoading} className='text-white bg-purple-500 max-w-fit m-auto p-1 rounded-md mt-4'>Login</button>
             
         </form>
     </>

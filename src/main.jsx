@@ -6,6 +6,8 @@ import './index.css'
 import { store } from "./redux/ReduxStore.jsx";
 import {Provider} from 'react-redux'
 
+
+
 const root = ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
