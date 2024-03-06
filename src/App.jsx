@@ -7,6 +7,7 @@ import LoginForm from './authentication/LoginForm'
 import './App.css'
 
 import { QueryClient, useQuery, QueryClientProvider } from '@tanstack/react-query';
+import toast, {Toaster} from "react-hot-toast";
 
 const queryClient = new QueryClient()
 
@@ -14,7 +15,8 @@ export default function App() {
 
   return (
     <>
-        <QueryClientProvider client={queryClient}>
+      <Toaster position='top-center' />
+      <QueryClientProvider client={queryClient}>
         <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,10 +25,7 @@ export default function App() {
           <Route path="/authentication/LoginForm" element={<LoginForm />} />
         </Routes>
       </Router>
-        </QueryClientProvider>
-
-
-      
+      </QueryClientProvider>
     </>
   )
 }
