@@ -8,7 +8,6 @@ import { productList } from '../ProductData';
   const [search,setSearch] = useState('');
   console.log(search);
   return (
-
     <div>
       <input type="text" onChange={(e)=>setSearch(e.target.value)} placeholder="Search for your drinks"></input>
       <div>
@@ -22,7 +21,6 @@ import { productList } from '../ProductData';
         })}
   </div>
     </div>
-
   )
 }
 
@@ -36,9 +34,7 @@ import { productList } from '../ProductData';
     </tr>
   })
 }
-
 export default Searchbar;*/
-
 
 export default function FilterableList() {
   const [query, setQuery] = useState("");
@@ -50,11 +46,10 @@ export default function FilterableList() {
 
   return (
     <>
-      <SearchBar query={query} onChange={handleChange}  />
-      <hr />
-      {query!=="" && (
-      <List items={results} />)}
-      
+      <div><SearchBar query={query} onChange={handleChange}  />
+        {query!=="" && (
+        <List items={results}/>)}
+      </div>
     </>
   );
 }
@@ -76,7 +71,7 @@ function filterItems(items, query) {
 
 function List({ items }) {
   return (
-    <table>
+    <table className='border-2 bg-lime-300 text-black'>
       <tbody>
         {items.map((food) => (
           <tr key={food.id}>

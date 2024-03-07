@@ -6,12 +6,12 @@ export default function Dropdown  ()  {
             <div className="absolute border-2 border-gray-400 w-32 mt-16 mr-80  shadow-2xl rounded-lg rounded-tl-none text-black  ">
                 
                 <Link to="/Coffee">
-                <ul className='m-0 hover:bg-blue-400 hover:border-blue-400'>Coffee</ul>
+                <ul className='m-0 text-white hover:bg-blue-400 hover:border-blue-400'>Coffee</ul>
                 </Link>
-                <ul className='m-0 hover:bg-blue-400 hover:border-blue-400'>Tea</ul>
-                <ul className='m-0 hover:bg-blue-400 hover:border-blue-400'>Juice</ul>
-                <ul className='m-0 hover:bg-blue-400 hover:border-blue-400'>Ice Cream</ul>
-                <ul className='m-0 hover:bg-blue-400 hover:border-blue-400'>Others</ul>
+                <ul className='m-0 text-white hover:bg-blue-400 hover:border-blue-400'>Tea</ul>
+                <ul className='m-0 text-white hover:bg-blue-400 hover:border-blue-400'>Juice</ul>
+                <ul className='m-0 text-white hover:bg-blue-400 hover:border-blue-400'>Ice Cream</ul>
+                <ul className='m-0 text-white hover:bg-blue-400 hover:border-blue-400'>Others</ul>
             </div>
     </>
   )
