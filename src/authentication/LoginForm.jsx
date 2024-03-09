@@ -13,7 +13,10 @@ const LoginForm = () => {
     e.preventDefault();
     if (!email || !password) return;
 
-    login({email, password}); // pass in an object {email, password}  inside a function login
+    login({email, password}, {onSettled: ()=>{// pass in an object {email, password}  inside a function login
+      //setEmail("");
+      setPassword("");
+    }}); 
   }
 
   return ( 

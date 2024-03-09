@@ -8,6 +8,7 @@ import './App.css'
 
 import { QueryClient, useQuery, QueryClientProvider } from '@tanstack/react-query';
 import toast, {Toaster} from "react-hot-toast";
+import ProtectedRoute from './components/ProtectedRoute'
 
 const queryClient = new QueryClient()
 
@@ -18,7 +19,7 @@ export default function App() {
       <Toaster position='top-center' />
       <QueryClientProvider client={queryClient}>
         <Router>
-        <Routes>
+        <Routes element={<ProtectedRoute />} >
           <Route path="/" element={<Home />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Coffee" element={<Coffee />} />
