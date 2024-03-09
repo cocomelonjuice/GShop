@@ -8,6 +8,7 @@ import {store} from "../redux/ReduxStore"
 import LoginForm from '../authentication/LoginForm';
 
 import FilterableList from "./Searchbar"
+import LogOut from "../authentication/LogOut";
 
 export default function Navbar () {
   //const {cart}= useSelector((state)=>state);
@@ -61,11 +62,10 @@ export default function Navbar () {
           {choosenItems?.length > 0 && (
             <div className="absolute  text-xs flex justify-center items-center animate-bounce -top-1 left-6 rounded-full w-5 h-5 bg-red-600 p-2.5 ">{/*{cart.length}*/}{choosenItems.length}</div>
           )}
-          
-
         </div>
       </Link>
 
+      <LogOut />
 
     </div>
   )
