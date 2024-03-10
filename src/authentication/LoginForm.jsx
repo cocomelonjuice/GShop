@@ -1,13 +1,21 @@
 import React from 'react'
 import { useState } from 'react';
 import { useLogin } from './useLogin';
+import { useNavigate } from 'react-router-dom';
+
 
 const LoginForm = () => {
 
   const[email,setEmail]=useState("tienminh@example.com");
   const [password,setPassword]=useState("12345678");
 
-  const {login, isLoading}=useLogin()
+  const {login, isLoading}=useLogin();
+
+  const navigate = useNavigate();
+
+  function handleNavigate(){
+    navigate("/authentication/SignUpForm");
+  }
 
   function handleSubmit (e){
     e.preventDefault();
@@ -37,8 +45,10 @@ const LoginForm = () => {
             </div>
           
             <button stype="submit" disabled={isLoading} className='text-white bg-purple-500 max-w-fit m-auto p-1 rounded-md mt-4'>Login</button>
-            
+
         </form>
+
+        <button onClick={handleNavigate}>New here ? Create account.</button>
     </>
   )
 }
