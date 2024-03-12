@@ -8,7 +8,7 @@ import {store} from "../redux/ReduxStore"
 import LoginForm from '../authentication/LoginForm';
 
 import FilterableList from "./Searchbar"
-import LogOut from "../authentication/LogOut";
+//import LogOut from "../authentication/LogOut";
 
 export default function Navbar () {
   //const {cart}= useSelector((state)=>state);
@@ -25,9 +25,7 @@ export default function Navbar () {
       <button className='flex flex-col mr-24 mt-2' onClick={()=>setOpen((prev)=>!prev)} >
         <TfiAlignJustify size={24} className='m-auto' />
         <div className='content-center text-md '>Menu</div>
-
         {isOpen && <Dropdown />}
-
       </button>
 
       {/*<div className=" flex flex-row relative justify-evenly h-8 gap-2">
@@ -37,17 +35,12 @@ export default function Navbar () {
         </button>
       </div>*/}
       
-
-      
       <div className=" flex flex-row relative justify-evenly h-8 gap-2">
       {<FilterableList ></FilterableList>}
         <button className='mt-5 absolute right-0 top-0 mr-2  text-black font-bold   w-5 h-5 content-center p-0.5'>
         <TfiSearch />
         </button>
       </div>
-        
-
- 
       
       <Link to="/authentication/LoginForm">
         <div className="mt-3">
@@ -64,8 +57,8 @@ export default function Navbar () {
           )}
         </div>
       </Link>
-
-      <LogOut />
+      
+      {/* <LogOut />*/}
 
     </div>
   )
