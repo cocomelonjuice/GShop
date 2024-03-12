@@ -16,7 +16,7 @@ const LoginForm = () => {
   function handleNavigate(){
     navigate("/authentication/SignUpForm");
   }
-
+  
   function handleSubmit (e){
     e.preventDefault();
     if (!email || !password) return;

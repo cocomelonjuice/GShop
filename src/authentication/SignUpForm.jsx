@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useSignup } from "./useSignup";
+import { useNavigate } from "react-router-dom";
 
 //fix : react hook form error display only when click "Complete" button first, video 393
 
@@ -13,6 +14,12 @@ function SignUpForm (){
 
   function onSubmit({fullName, email, password}){
     signup({fullName, email, password})
+  }
+  
+  const navigate = useNavigate();
+
+  function handleNavigate(){
+    navigate("/");
   }
 
   return (
@@ -47,7 +54,11 @@ function SignUpForm (){
                 <p className="text-red-500">{errors.passwordConfirm?.message}</p>
             </div>
           
-            <button stype="submit" className='text-white bg-purple-500 max-w-fit m-auto p-1 rounded-md mt-4'>Complete</button>
+            <div className="flex flex-col max-w-20 m-auto gap-0 ">
+              <button type="submit" className='text-white bg-purple-500 max-w-fit m-auto p-1 rounded-md mt-4'>Complete</button>
+              <button onClick={handleNavigate} className='text-white bg-purple-500 max-w-fit m-auto p-1 rounded-md mt-4'>Cancel</button>
+            </div>
+            
       </form>
     </>
   )
