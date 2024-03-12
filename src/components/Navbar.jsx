@@ -6,6 +6,7 @@ import Dropdown from './Dropdown';
 import {useSelector} from "react-redux";
 import {store} from "../redux/ReduxStore"
 import LoginForm from '../authentication/LoginForm';
+import DropdownUser from "./DropdownUser";
 
 import FilterableList from "./Searchbar"
 //import LogOut from "../authentication/LogOut";
@@ -14,6 +15,7 @@ export default function Navbar () {
   //const {cart}= useSelector((state)=>state);
   const {choosenItems}=useSelector((state)=>state.cart)
   const [isOpen,setOpen] = useState(false);
+  
   
   return (
     
@@ -57,7 +59,7 @@ export default function Navbar () {
           )}
         </div>
       </Link>
-      
+
       {/* <LogOut />*/}
 
     </div>
