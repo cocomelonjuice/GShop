@@ -15,6 +15,7 @@ export default function Navbar () {
   //const {cart}= useSelector((state)=>state);
   const {choosenItems}=useSelector((state)=>state.cart)
   const [isOpen,setOpen] = useState(false);
+  const [isClick, setClick] = useState(false);
   
   
   return (
@@ -44,11 +45,15 @@ export default function Navbar () {
         </button>
       </div>
       
-      <Link to="/authentication/LoginForm">
-        <div className="mt-3">
+      
+
+        <div onClick={()=>setClick((prev)=>!prev)} className="mt-3">
           <TfiUser size={24}/>
+          {isClick && <DropdownUser />}
         </div>
-      </Link>
+
+        {/*<Link to="/authentication/LoginForm">
+          </Link>*/}
       
       {/* add logic: only show number of item in cart when item.length>0 , and when item.length>99, show 99+ to not overstretch the icon*/ }
       <Link to="/Cart">
