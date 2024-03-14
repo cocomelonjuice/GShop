@@ -17,7 +17,6 @@ export default function Navbar () {
   const [isOpen,setOpen] = useState(false);
   const [isClick, setClick] = useState(false);
   
-  
   return (
     
     <div className='fixed top-0 w-screen left-0 right-0 flex flex-row justify-evenly bg-blue-800 text-white'>
@@ -45,8 +44,6 @@ export default function Navbar () {
         </button>
       </div>
       
-      
-
         <div onClick={()=>setClick((prev)=>!prev)} className="mt-3">
           <TfiUser size={24}/>
           {isClick && <DropdownUser />}
