@@ -12,11 +12,16 @@ export default function Home ()  {
 
   return (
     <div className="" >
+
       <Navbar />
-        <div className="flex-wrap flex items-center flex-col ">{productList.map((item)=>{
+
+      <div className="flex flex-row flex-wrap ">{productList.map((item)=>{   //flex-wrap flex items-center flex-row gap-2
           return <Product key={item.id} item={item} />
-        })}</div>
+        })}
+      </div>
+
       <Footer />
+
     </div>
     
   )
