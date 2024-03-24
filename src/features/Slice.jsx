@@ -7,6 +7,11 @@ const items=localStorage.getItem('choosenItems')!==null?JSON.parse(localStorage.
 const cartTotalQuantity=localStorage.getItem('cartTotalQuantity')!==null?JSON.parse(localStorage.getItem('cartTotalQuantity')):[];
 const cartTotalAmount=localStorage.getItem('cartTotalAmount')!==null?JSON.parse(localStorage.getItem('cartTotalAmount')):[];
 
+const setItemFunc = (item, cartTotalQuantity, cartTotalAmount)=>{
+  localStorage.setItem('choosenItems', JSON.stringify(item));
+  localStorage.setItem('cartTotalQuantity', JSON.stringify(cartTotalQuantity));
+  localStorage.setItem('cartTotalAmount', JSON.stringify(cartTotalAmount));
+}
 
 const initialState ={
     choosenItems : items, //[]
@@ -31,9 +36,7 @@ const cartSlice =  createSlice ({
                 const tempProduct = {...action.payload, cartQuantity:1};
                 state.choosenItems.push(tempProduct);
             }
-            localStorage.setItem('choosenItems',JSON.stringify(state.choosenItems.map(item=>item)));
-            localStorage.setItem('cartTotalQuantity',JSON.stringify(state.cartTotalQuantity));
-            localStorage.setItem('cartTotalAmount',JSON.stringify(state.cartTotalAmount));
+            setItemFunc(state.choosenItems.map((item)=>item), state.cartTotalAmount,state.cartTotalQuantity);
         },
 
         decreaseCart(state, action) {
@@ -50,9 +53,7 @@ const cartSlice =  createSlice ({
               );
               state.choosenItems = nextCartItems;
             }
-            localStorage.setItem('choosenItems',JSON.stringify(state.choosenItems.map(item=>item)));
-            localStorage.setItem('cartTotalQuantity',JSON.stringify(state.cartTotalQuantity));
-            localStorage.setItem('cartTotalAmount',JSON.stringify(state.cartTotalAmount));
+            setItemFunc(state.choosenItems.map((item)=>item), state.cartTotalAmount,state.cartTotalQuantity);
           },
 
           removeFromCart(state, action) {
@@ -66,9 +67,7 @@ const cartSlice =  createSlice ({
               }
               return state;
             });
-            localStorage.setItem('choosenItems',JSON.stringify(state.choosenItems.map(item=>item)));
-            localStorage.setItem('cartTotalQuantity',JSON.stringify(state.cartTotalQuantity));
-            localStorage.setItem('cartTotalAmount',JSON.stringify(state.cartTotalAmount));
+            setItemFunc(state.choosenItems.map((item)=>item), state.cartTotalAmount,state.cartTotalQuantity);
           },
 
           getTotals(state, action) {
@@ -91,9 +90,7 @@ const cartSlice =  createSlice ({
             state.cartTotalQuantity = quantity;
             state.cartTotalAmount = total;
 
-            localStorage.setItem('choosenItems',JSON.stringify(state.choosenItems.map(item=>item)));
-            localStorage.setItem('cartTotalQuantity',JSON.stringify(state.cartTotalQuantity));
-            localStorage.setItem('cartTotalAmount',JSON.stringify(state.cartTotalAmount));
+            setItemFunc(state.choosenItems.map((item)=>item), state.cartTotalAmount,state.cartTotalQuantity);
           },
     }
 })
