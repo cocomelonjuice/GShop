@@ -1,10 +1,17 @@
 import { createSlice} from "@reduxjs/toolkit"
 import { productList } from "../ProductData"
+import { useEffect } from "react";
+
+
+const items=localStorage.getItem('choosenItems')!==null?JSON.parse(localStorage.getItem('choosenItems')):[];
+const cartTotalQuantity=localStorage.getItem('cartTotalQuantity')!==null?JSON.parse(localStorage.getItem('cartTotalQuantity')):[];
+const cartTotalAmount=localStorage.getItem('cartTotalAmount')!==null?JSON.parse(localStorage.getItem('cartTotalAmount')):[];
+
 
 const initialState ={
-    choosenItems :[],
-    cartTotalQuantity:0,
-    cartTotalAmount:0,
+    choosenItems : items, //[]
+    //cartTotalQuantity:0,
+    //cartTotalAmount:0,
 };
 
 const cartSlice =  createSlice ({
@@ -24,6 +31,9 @@ const cartSlice =  createSlice ({
                 const tempProduct = {...action.payload, cartQuantity:1};
                 state.choosenItems.push(tempProduct);
             }
+            localStorage.setItem('choosenItems',JSON.stringify(state.choosenItems.map(item=>item)));
+            localStorage.setItem('cartTotalQuantity',JSON.stringify(state.cartTotalQuantity));
+            localStorage.setItem('cartTotalAmount',JSON.stringify(state.cartTotalAmount));
         },
 
         decreaseCart(state, action) {
@@ -40,6 +50,9 @@ const cartSlice =  createSlice ({
               );
               state.choosenItems = nextCartItems;
             }
+            localStorage.setItem('choosenItems',JSON.stringify(state.choosenItems.map(item=>item)));
+            localStorage.setItem('cartTotalQuantity',JSON.stringify(state.cartTotalQuantity));
+            localStorage.setItem('cartTotalAmount',JSON.stringify(state.cartTotalAmount));
           },
 
           removeFromCart(state, action) {
@@ -53,6 +66,9 @@ const cartSlice =  createSlice ({
               }
               return state;
             });
+            localStorage.setItem('choosenItems',JSON.stringify(state.choosenItems.map(item=>item)));
+            localStorage.setItem('cartTotalQuantity',JSON.stringify(state.cartTotalQuantity));
+            localStorage.setItem('cartTotalAmount',JSON.stringify(state.cartTotalAmount));
           },
 
           getTotals(state, action) {
@@ -74,6 +90,10 @@ const cartSlice =  createSlice ({
             total = parseFloat(total.toFixed(2));
             state.cartTotalQuantity = quantity;
             state.cartTotalAmount = total;
+
+            localStorage.setItem('choosenItems',JSON.stringify(state.choosenItems.map(item=>item)));
+            localStorage.setItem('cartTotalQuantity',JSON.stringify(state.cartTotalQuantity));
+            localStorage.setItem('cartTotalAmount',JSON.stringify(state.cartTotalAmount));
           },
     }
 })

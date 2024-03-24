@@ -20,7 +20,7 @@ export default function Home ()  {
         })}
       </div>
 
-      <Footer />
+      <Footer className="mt-auto"/>
 
     </div>
     
