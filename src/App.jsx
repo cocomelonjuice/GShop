@@ -36,3 +36,6 @@ export default function App() {
 }
 
 
+
+//phut 5:00 youutbe la bat dau router v6
+

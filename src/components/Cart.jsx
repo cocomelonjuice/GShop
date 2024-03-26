@@ -35,7 +35,7 @@ const Cart = ({item}) => {
               <button>CHECKOUT</button>
         </div>
       ):(
-        <div className="mt-7 flex content-center justify-center">Your Cart is empty</div>
+        <div className="mt-20 text-black flex content-center justify-center">Your Cart is empty</div>
       )}
     </div>
   )

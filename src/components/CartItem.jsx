@@ -32,6 +32,7 @@ const CartItem = ({item}) => {
       <div>Quantity {item.cartQuantity}</div>
       <div>${item.price * item.cartQuantity}</div>
     </div>   
-  )
+    )
 }
+
 export default CartItem;
