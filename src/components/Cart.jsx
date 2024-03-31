@@ -35,6 +35,7 @@ const Cart = ({item}) => {
               <div>Cart total quantity: {cartTotalQuantity}</div>
               <div>Sub Total Price:$ {cartTotalAmount}</div>
               <button onClick={Checkout}>CHECKOUT</button>
+              <div><Checkout /></div>
         </div>
       ):(
         <div className="mt-20 text-black flex content-center justify-center">Your Cart is empty</div>
