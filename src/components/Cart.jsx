@@ -12,7 +12,7 @@ const Cart = ({item}) => {
 
   const {cart,choosenItems, cartTotalAmount}=useSelector((state)=>state.cart);
   const {cartTotalQuantity} = useSelector((state)=>state.cart)
-
+  const [checkOut, openCheckOut]=useState(false);
 
   const dispatch = useDispatch();
 
@@ -25,7 +25,6 @@ const Cart = ({item}) => {
       <div><Navbar /></div>
       { choosenItems?.length > 0 ? (
         <div >
-            <div><Checkout /></div>
           {choosenItems.map((item) => {
                 return <CartItem key={item.id} item={item} />;
               })}
@@ -35,8 +34,8 @@ const Cart = ({item}) => {
               <div>Total Distinct Item: {choosenItems.length}</div>
               <div>Cart total quantity: {cartTotalQuantity}</div>
               <div>Sub Total Price:$ {cartTotalAmount}</div>
-              <button onClick={Checkout}>CHECKOUT</button>
-              
+              <button onClick={()=> openCheckOut((prev)=>!prev)}>CHECKOUT</button> 
+              {checkOut && <Checkout />}
         </div>
       ):(
         <div className="mt-20 text-black flex content-center justify-center">Your Cart is empty</div>
