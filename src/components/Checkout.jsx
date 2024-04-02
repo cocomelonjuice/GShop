@@ -1,6 +1,8 @@
 import React from 'react'
-//import Cart from './Cart'
-//import CartItem from './CartItem'
+import Cart from './Cart'
+import { store } from '../redux/ReduxStore'
+import Product from './Product'
+import CartItem from './CartItem'
 
 const Checkout = () => {
   return (
