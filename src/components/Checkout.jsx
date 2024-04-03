@@ -3,8 +3,12 @@ import Cart from './Cart'
 import { store } from '../redux/ReduxStore'
 import Product from './Product'
 import CartItem from './CartItem'
+import { useSelector } from 'react-redux'
 
 const Checkout = () => {
+
+  //const data = useSelector((state)=>state.cart);
+  const {cart,choosenItems, cartTotalAmount}=useSelector((state)=>state.cart);
   return (
   <div className="border-red-600 border-4 bg-teal-200 m-auto inset-0 absolute w-1/2 h-1/4 ">    
   <div>Delivery to:</div>
@@ -40,6 +44,14 @@ const Checkout = () => {
   <div>
     <div>Order summary</div>
     {/* show item list with price, numbers, and shipping fee */}
+    {/*<div>{data}</div>*/}
+    { choosenItems?.length > 0 ? (
+        <div >
+          {choosenItems.map((item) => {
+                return <CartItem key={item.id} item={item} />;
+              })}</div>
+              ):null}
+
     <div>Order total price:</div>
   </div>
 
