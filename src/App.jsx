@@ -12,6 +12,8 @@ import { QueryClient, useQuery, QueryClientProvider } from '@tanstack/react-quer
 import toast, {Toaster} from "react-hot-toast";
 import ProtectedRoute from './components/ProtectedRoute'
 
+import PrivateRoutes from './components/ProtectedRoute2'
+
 const queryClient = new QueryClient()
 
 export default function App() {
@@ -21,9 +23,15 @@ export default function App() {
       <Toaster position='top-center' />
       <QueryClientProvider client={queryClient}>
         <Router>
-        <Routes element={<ProtectedRoute />} >
+        {/*<Routes element={<ProtectedRoute />} > đây là protected route cũ*/} 
+        <Routes>
+
+          <Route element={<PrivateRoutes />}>
+            <Route path="/Cart" element={<Cart />} />
+          </Route>
+
           <Route path="/" element={<Home />} />
-          <Route path="/Cart" element={<Cart />} />
+          {/*<Route path="/Cart" element={<Cart />} /> đây là protected route cũ*/}
           <Route path="/Coffee" element={<Coffee />} />
           <Route path="/authentication/LoginForm" element={<LoginForm />} />
           <Route path="/authentication/SignUpForm" element={<SignUpForm />} />
