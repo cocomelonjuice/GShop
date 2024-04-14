@@ -3,9 +3,13 @@ import { productList } from "../ProductData"
 import { useEffect } from "react";
 
 
-const items=localStorage.getItem('choosenItems')!==null?JSON.parse(localStorage.getItem('choosenItems')):[];
+/*const items=localStorage.getItem('choosenItems')!==null?JSON.parse(localStorage.getItem('choosenItems')):[];
 const cartTotalQuantity=localStorage.getItem('cartTotalQuantity')!==null?JSON.parse(localStorage.getItem('cartTotalQuantity')):[];
-const cartTotalAmount=localStorage.getItem('cartTotalAmount')!==null?JSON.parse(localStorage.getItem('cartTotalAmount')):[];
+const cartTotalAmount=localStorage.getItem('cartTotalAmount')!==null?JSON.parse(localStorage.getItem('cartTotalAmount')):[];*/
+
+const items=localStorage.getItem('choosenItems')!=="undefined"?JSON.parse(localStorage.getItem('choosenItems')):[];
+const cartTotalQuantity=localStorage.getItem('cartTotalQuantity')!=="undefined"?JSON.parse(localStorage.getItem('cartTotalQuantity')):[];
+const cartTotalAmount=localStorage.getItem('cartTotalAmount')!=="undefined"?JSON.parse(localStorage.getItem('cartTotalAmount')):[];
 
 const setItemFunc = (item, cartTotalQuantity, cartTotalAmount)=>{
   localStorage.setItem('choosenItems', JSON.stringify(item));

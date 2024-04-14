@@ -7,6 +7,7 @@ import LoginForm from './authentication/LoginForm'
 import './App.css'
 import SignUpForm from './authentication/SignUpForm'
 import LogOut from './authentication/LogOut'
+import Product from './components/Product'
 
 import { QueryClient, useQuery, QueryClientProvider } from '@tanstack/react-query';
 import toast, {Toaster} from "react-hot-toast";
@@ -29,6 +30,10 @@ export default function App() {
           <Route element={<PrivateRoutes />}>
             <Route path="/Cart" element={<Cart />} />
           </Route>
+
+       {/*<Route element={<PrivateRoutes3 />}>
+            <Route path="/Product" element={<Product />} />
+          </Route>*/}
 
           <Route path="/" element={<Home />} />
           {/*<Route path="/Cart" element={<Cart />} /> đây là protected route cũ*/}
