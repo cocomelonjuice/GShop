@@ -5,25 +5,19 @@ import Product from './components/Product'
 import { productList } from './ProductData'
 import Footer from './components/Footer'
 
-
-  
+import SortByPrice from './components/SortByPrice'
 
 export default function Home ()  {
-
   return (
     <div className="" >
-
       <Navbar />
-
+      <SortByPrice />
       <div className="flex flex-row flex-wrap ">{productList.map((item)=>{   //flex-wrap flex items-center flex-row gap-2
           return <Product key={item.id} item={item} />
         })}
       </div>
-
       <Footer className="mt-auto"/>
-
     </div>
-    
   )
 } 
 

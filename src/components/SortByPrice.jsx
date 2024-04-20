@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { productList } from './ProductData'
-import { useState } from 'react';
 import { productList } from '../ProductData';
 
 const SortByPrice = () => {
@@ -27,12 +25,12 @@ const SortByPrice = () => {
     console.log(nextList);
   }
   return (
-    <>
-    <select name="" id="">
+    <div className="border-red-600   ">
+    <select className='mt-20'>
       <option value="ascending">Ascending</option>
       <option value="descending">Descending</option>
     </select>
-    </>
+    </div>
   )
 }
 
