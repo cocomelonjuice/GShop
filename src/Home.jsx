@@ -9,9 +9,9 @@ import SortByPrice from './components/SortByPrice'
 
 export default function Home ()  {
   return (
-    <div className="" >
+    <div className="">
       <Navbar />
-      <SortByPrice />
+      <SortByPrice /> {/* render the item here (use the sort list from SortByPrice), dont create another render component */}
       <div className="flex flex-row flex-wrap ">{productList.map((item)=>{   //flex-wrap flex items-center flex-row gap-2
           return <Product key={item.id} item={item} />
         })}
