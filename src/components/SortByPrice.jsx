@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { productList } from '../ProductData';
+import { current } from '@reduxjs/toolkit';
 
 const SortByPrice = () => {
 
@@ -30,9 +31,10 @@ const SortByPrice = () => {
              compare(a.name, b.name, toAscending) 
              : 
              compare(a.price, b.price, toAscending))
-      itemSort([...current])
+      itemSort(current)
     }
   }
+
   return(
     <div>
     <select className='mt-20' onChange={(e) => handleChange(e.target.value)}>

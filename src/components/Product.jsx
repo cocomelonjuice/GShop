@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Product = ({item})=>{
   const {cart} = useSelector((state)=>state.cart);
-  let authUser= localStorage.getItem("sb-gizwpeatbfldniwqrmel-auth-token");
+  let authUser= localStorage.getItem("sb-gizwpeatbfldniwqrmel-auth-token");//get item for any user, not just only this user
   const dispatch = useDispatch();
   const addToCart = ()=>{
     dispatch(add(item))
