@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 import { productList } from '../ProductData';
 import { current } from '@reduxjs/toolkit';
+import Home from '../Home';
 
-const SortByPrice = () => {
 
-  const[item,itemSort]=useState(productList);
+const SortByPrice = ({item, itemSort}) => {
+  //lift state up to share state: 
+  //Move the state from the child component to the parent component.
+  //Pass the state down to the child components via props. https://www.youtube.com/watch?v=qdkW8VxCau0
+  //If the child components need to modify the state, pass down callback functions via props.
+  //or using useContext hook/ usereducer ?
+  //const[item,itemSort]=useState(productList);
   const compare = (a, b, ascendingOrder) => {
     if (a < b) {
       return ascendingOrder ? -1 : 1;
