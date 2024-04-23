@@ -28,7 +28,7 @@ export const productList =  [
         name: "Tea4",
         type: "Tea",
         price: 55000,
-        image: "https://phuclong.com.vn/uploads/dish/4d247cffb2c4d5-hngtrchanh.png",
+        image: "https://phuclong.com.vn/uploads/dish/3937476a64a213-trophclong.png",
         qty: 1
     },
     
@@ -37,7 +37,7 @@ export const productList =  [
         name: "Coffee1",
         type: "Coffee",
         price: 30000,
-        image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-bac-xiu-1611605084?w=640&amp;type=o",
+        image: "https://phuclong.com.vn/uploads/dish/8a92bb4b37c012-cafe5mon01.png",
         qty: 1
     },
     {
@@ -45,7 +45,7 @@ export const productList =  [
         name: "Coffee2",
         type: "Coffee",
         price: 35000,
-        image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-espresso-sua-da-1611605084?w=640&amp;type=o",
+        image: "https://phuclong.com.vn/uploads/dish/24d0961b7dba35-chocolatephclong.png",
         qty: 1
     },
     {
@@ -53,7 +53,7 @@ export const productList =  [
         name: "Coffee3",
         type: "Coffee",
         price: 40000,
-        image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-espresso-da-1611605085?w=640&amp;type=o",
+        image: "https://phuclong.com.vn/uploads/dish/4521f4c77fc38a-cf67efb06d5aa504fc4b.png",
         qty: 1
     },
     {
@@ -61,7 +61,7 @@ export const productList =  [
         name: "Coffee4",
         type: "Coffee",
         price: 45000,
-        image: "https://tea-3.lozi.vn/v1/ship/resized/passio-coffee-133-ham-nghi-quan-1-ho-chi-minh-1611605081097271630-ice-latte-1611605085?w=640&amp;type=o",
+        image: "https://phuclong.com.vn/uploads/dish/8ebb07f0eeccc1-resize_damdadunggu07.png",
         qty: 1
     },
     {
@@ -69,23 +69,65 @@ export const productList =  [
         name: "Juice1",
         type: "Juice",
         price: 55000,
-        image: "",
+        image: "https://phuclong.com.vn/uploads/dish/37702760a2b2e3-65000309nhnxay.png",
         qty: 1
     },
+
     {
         id: 10,
-        name: "IceCream1",
-        type: "Icecream",
+        name: "Juice2",
+        type: "Juice",
         price: 55000,
-        image: "",
+        image: "https://phuclong.com.vn/uploads/dish/65a7d028c2229d-sachuaxoicthmphclong.png",
         qty: 1
     },
     {
         id: 11,
-        name: "Others1",
-        type: "other",
+        name: "Juice3",
+        type: "Juice",
         price: 55000,
-        image: "",
+        image: "https://phuclong.com.vn/uploads/dish/4136b3715bff3e-sachuaphcbntccamphclong.png",
         qty: 1
-    } 
+    },
+
+    {
+        id: 12,
+        name: "Juice4",
+        type: "Juice",
+        price: 55000,
+        image: "https://phuclong.com.vn/uploads/dish/64bd44180be24c-sinhtchanh.png",
+        qty: 1
+    },
+    {
+        id: 13,
+        name: "Bakery1",
+        type: "Bakery",
+        price: 55000,
+        image: "https://phuclong.com.vn/uploads/dish/61b22d5643fc80-img_67711.png",
+        qty: 1
+    },
+    {
+        id: 14,
+        name: "Bakery2",
+        type: "Bakery",
+        price: 55000,
+        image: "https://phuclong.com.vn/uploads/dish/01b9696b860549-banhphap_0000s_0001_buttercroissant.jpg",
+        qty: 1
+    },
+    {
+        id: 15,
+        name: "Dessert1",
+        type: "Dessert",
+        price: 55000,
+        image: "https://phuclong.com.vn/uploads/dish/774b3f1fd9202e-greenteachocolatecake.png",
+        qty: 1
+    },
+    {
+        id: 16,
+        name: "Dessert2",
+        type: "Dessert",
+        price: 55000,
+        image: "https://phuclong.com.vn/uploads/dish/a9686c8f36a908-passionpannacotta.png",
+        qty: 1
+    },
 ]
