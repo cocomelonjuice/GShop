@@ -3,7 +3,6 @@ import { productList } from '../ProductData';
 import { current } from '@reduxjs/toolkit';
 import Home from '../Home';
 
-
 const SortByPrice = ({item, itemSort}) => {
   //lift state up to share state: 
   //Move the state from the child component to the parent component.
@@ -42,21 +41,19 @@ const SortByPrice = ({item, itemSort}) => {
   }
 
   return(
-    <div>
-    <select className='mt-20' onChange={(e) => handleChange(e.target.value)}>
+    <div className=''>
+    <h1 className='mt-20 text-black'>Sort by:</h1>
+    <select  onChange={(e) => handleChange(e.target.value)}>
       <option value="none">Default</option>
       <option value="ascending">Alphabetically, A-Z</option>
       <option value="descending">Alphabetically, Z-A</option>
       <option value="high">Low to high</option>
       <option value="low">High to low</option>
     </select>
-    {item.map(elem => <p key={elem.name}>{elem.name} {elem.price}</p>)}
+
+    {/*{item.map(elem => <p key={elem.name}>{elem.name} {elem.price}</p>)}*/}
     </div>
   )
-
-
-
-
 
   /*const[item,itemSort]=useState(productList);
 
