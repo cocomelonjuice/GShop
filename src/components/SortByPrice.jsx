@@ -41,18 +41,18 @@ const SortByPrice = ({item, itemSort}) => {
   }
 
   return(
-    <div className=''>
-    <h1 className='mt-20 text-black'>Sort by:</h1>
-    <select  onChange={(e) => handleChange(e.target.value)}>
+  <div className='mb-8 border-gray-200 max-w-max min-h-16 mt-20 mx-auto'>
+    <h1 className='mt-2 text-black'>Sort by</h1>
+    <select className='border-2 mb-0 rounded-md' onChange={(e) => handleChange(e.target.value)}>
       <option value="none">Default</option>
-      <option value="ascending">Alphabetically, A-Z</option>
-      <option value="descending">Alphabetically, Z-A</option>
-      <option value="high">Low to high</option>
-      <option value="low">High to low</option>
+      {/*<option value="ascending">Alphabetically, A-Z</option>*/}
+      {/*<option value="descending">Alphabetically, Z-A</option>*/}
+      <option value="high">Lowest to Highest</option>
+      <option value="low">Highest to Lowest</option>
     </select>
 
     {/*{item.map(elem => <p key={elem.name}>{elem.name} {elem.price}</p>)}*/}
-    </div>
+  </div>
   )
 
   /*const[item,itemSort]=useState(productList);

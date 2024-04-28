@@ -18,7 +18,7 @@ export default function Home ()  {
         })}
       </div>*/}
 
-      <div className="flex flex-row flex-wrap gap-2 ml-44">{item.map((item)=>{   //flex-wrap flex items-center flex-row gap-2
+      <div className="flex flex-row flex-wrap gap-4 ml-40 mb-2">{item.map((item)=>{   //flex-wrap flex items-center flex-row gap-2
           return <Product key={item.id} item={item} />
         })}
       </div>
