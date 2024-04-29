@@ -21,8 +21,8 @@ const CartItem = ({item}) => {
   };
   
   return (
-    <div key={item.id} className=" rounded-xl shadow-2xl hover:bg-teal-100 max-w-max max-h-max flex flex-row">
-      <img  src={item.image} className="m-auto h-52 w-52" />
+    <div key={item.id} className=" rounded-xl shadow-2xl hover:bg-teal-200 max-h-max flex flex-row">
+      <img  src={item.image} className="m-auto h-52 w-52 " /> {/*mix-blend-multiply causes transparent between item and navbar */}
       <div className="mt-6 ml-2 ">{item.name}</div>
       <div className="mt-6 ml-12 mr-4">
         <div>Price: {item.price * item.cartQuantity}</div>
