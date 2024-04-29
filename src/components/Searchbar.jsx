@@ -71,10 +71,10 @@ function filterItems(items, query) {
 
 function List({ items }) {
   return (
-    <table className='border-2 bg-lime-300 text-black'>
+    <table className=' shadow-lg rounded-md bg-white text-black min-w-80'>
       <tbody>
         {items.map((food) => (
-          <tr key={food.id}>
+          <tr className='hover:shadow-lg' key={food.id}>
             <td>{food.name}</td>
             <td>{food.price}</td>
           </tr>

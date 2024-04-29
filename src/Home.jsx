@@ -5,6 +5,8 @@ import { productList } from './ProductData'
 import Footer from './components/Footer'
 import { useState } from 'react'
 import SortByPrice from './components/SortByPrice'
+import {toast} from "react-hot-toast";
+
 
 export default function Home ()  {
   const[item,itemSort]=useState(productList);
@@ -12,7 +14,7 @@ export default function Home ()  {
   return (
     <div>
       <Navbar />
-      <SortByPrice className="" itemSort={itemSort} item={item} /> {/* render the item here (use the sort list from SortByPrice), dont create another render component */}
+      <SortByPrice className="mt-20" itemSort={itemSort} item={item} /> {/* render the item here (use the sort list from SortByPrice), dont create another render component */}
       {/*<div className="flex flex-row flex-wrap ">{productList.map((item)=>{   //flex-wrap flex items-center flex-row gap-2
           return <Product key={item.id} item={item} />
         })}

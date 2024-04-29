@@ -21,16 +21,18 @@ const CartItem = ({item}) => {
   };
   
   return (
-    <div key={item.id} className="">
-      <img src={item.image} className="m-auto" />
-      <div>{item.name}</div>
-      <div>{item.price}</div>
-      <br />
-      <button onClick={()=>handleAddToCart(item)} className="rounded-full border-red-600 border-2 bg-red-600 text-white px-1 hover:bg-red-400">+</button>
-      <button onClick={() => handleRemoveFromCart(item) } className="rounded-full border-red-600 border-2 bg-red-600 text-white px-1 hover:bg-red-400">Remove</button>
-      <button onClick={() => handleDecreaseCart(item)} className="rounded-full border-red-600 border-2 bg-red-600 text-white px-1 hover:bg-red-400">-</button>
-      <div>Quantity {item.cartQuantity}</div>
-      <div>${item.price * item.cartQuantity}</div>
+    <div key={item.id} className=" rounded-xl shadow-2xl hover:bg-teal-100 max-w-max max-h-max flex flex-row">
+      <img  src={item.image} className="m-auto h-52 w-52" />
+      <div className="mt-6 ml-2 ">{item.name}</div>
+      <div className="mt-6 ml-12 mr-4">
+        <div>Price: {item.price * item.cartQuantity}</div>
+        {/*<button onClick={() => handleRemoveFromCart(item) } className="rounded-full border-red-600 border-2 bg-red-600 text-white px-1 hover:bg-red-400">Remove</button>*/}
+        <div className="mt-28 flex gap-4">
+          <button onClick={()=>handleAddToCart(item)} className="rounded-full border-black border-2 text-black text-xs px-2.5  hover:bg-blue-400 hover:text-white bg-white">+</button> 
+          <div className="text-lg">{item.cartQuantity}</div>
+          <button onClick={() => handleDecreaseCart(item)} className="rounded-full border-black border-2  text-black px-2.5 text-lg hover:bg-red-400 hover:text-white bg-white">-</button>
+        </div>
+      </div>
     </div>   
     )
 }

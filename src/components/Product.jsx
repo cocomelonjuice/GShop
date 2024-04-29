@@ -3,8 +3,9 @@ import { add} from "../features/Slice";
 import {useSelector, useDispatch} from "react-redux";
 import {store} from "../redux/ReduxStore";
 import CartItem from "./CartItem";
-
 import { Link } from "react-router-dom";
+import {toast} from "react-hot-toast";
+
 
 const Product = ({item})=>{
   const {cart} = useSelector((state)=>state.cart);
@@ -12,6 +13,9 @@ const Product = ({item})=>{
   const dispatch = useDispatch();
   const addToCart = ()=>{
     dispatch(add(item))
+    toast.success(
+      "Added to your cart"
+  );
   }
 
   return (
