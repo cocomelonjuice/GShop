@@ -21,7 +21,7 @@ const Product = ({item})=>{
   return (
     <>
       <div>
-        <div className="rounded-lg border-blue-400 hover:shadow-xl shadow-xl hover:border-2 pb-2 pt-2 ">
+        <div className="rounded-lg shadow-lg hover:border-blue-600 hover:shadow-2xl pb-2 pt-2 ">
           <img className="h-72 w-72" src={item.image} />
           <p>{item.name}</p>
           <p>{item.price}</p>

@@ -28,9 +28,10 @@ const CartItem = ({item}) => {
         <div>Price: {item.price * item.cartQuantity}</div>
         {/*<button onClick={() => handleRemoveFromCart(item) } className="rounded-full border-red-600 border-2 bg-red-600 text-white px-1 hover:bg-red-400">Remove</button>*/}
         <div className="mt-28 flex gap-4">
-          <button onClick={()=>handleAddToCart(item)} className="rounded-full border-black border-2 text-black text-xs px-2.5  hover:bg-blue-400 hover:text-white bg-white">+</button> 
+          <button onClick={()=>handleAddToCart(item)} className="rounded-full border-black border-2 text-black text-xs px-2.5  hover:bg-green-400 hover:text-white bg-white">+</button> 
           <div className="text-lg">{item.cartQuantity}</div>
-          <button onClick={() => handleDecreaseCart(item)} className="rounded-full border-black border-2  text-black px-2.5 text-lg hover:bg-red-400 hover:text-white bg-white">-</button>
+          <button onClick={() => handleDecreaseCart(item)} className="rounded-full border-black border-2  text-black px-2.5 text-lg hover:bg-red-400 hover:text-white bg-white">-</button>    
+          <button onClick={() => handleRemoveFromCart(item) } className="rounded-full bg-red-400 text-white px-1 hover:bg-red-600">Remove</button>
         </div>
       </div>
     </div>   
