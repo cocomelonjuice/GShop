@@ -29,7 +29,7 @@ const LoginForm = () => {
 
   return ( 
     <>
-        <form onSubmit={handleSubmit} className='bg-gray-200 mt-52 flex flex-col gap-4 p-4 max-w-fit m-auto'> {/*flex justify-center items-center mx-24 my-48  */} {/*grid place-content-center m-auto w-1/2 h-1/2  */}
+        <form onSubmit={handleSubmit} className='bg-gray-200 rounded-xl mt-52 flex flex-col gap-4 p-4 max-w-fit m-auto'> {/*flex justify-center items-center mx-24 my-48  */} {/*grid place-content-center m-auto w-1/2 h-1/2  */}
             <h1 className='text-xl mb-6'>
               Sign in to ShopG
             </h1>
@@ -48,7 +48,7 @@ const LoginForm = () => {
 
         </form>
 
-        <button onClick={handleNavigate}>New here ? Create account.</button>
+        <button className='underline' onClick={handleNavigate}>New here ? Create an account.</button>
     </>
   )
 }
