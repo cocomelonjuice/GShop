@@ -37,7 +37,7 @@ export default function Navbar () {
         </button>
       </div>*/}
       
-      <div className=" flex flex-row relative justify-evenly h-8 gap-2">
+      <div className=" flex flex-row relative justify-evenly h-8 gap-2 mr-20">
       <FilterableList ></FilterableList>
       {/*<FilterableList></FilterableList>*/}
         <button className='mt-5 absolute right-0 top-0 mr-2  text-black font-bold   w-5 h-5 content-center p-0.5'>

@@ -4,14 +4,14 @@ import Footer from "./Footer"
 import Product from "./Product"
 
 
-export default function Coffee () {
-  const listCoffee = (productList.filter(item=>item.type=="Coffee"));
+export default function Dessert () {
+  const listDessert = (productList.filter(item=>item.type=="Dessert"));
   //const listCoffee = (productList.filter(item=>item.type=="Coffee")).map(item=> <li>{item.name}<img src={item.image}></img></li>)
   return (
     <div className="">
       <Navbar />     
       {/*{<ul>{listCoffee}</ul>}*/}
-      <div className="flex flex-row flex-wrap gap-4 ml-40 mb-2 mt-36">{listCoffee.map((item)=>{   //flex-wrap flex items-center flex-row gap-2
+      <div className="flex flex-row flex-wrap gap-4 ml-40 mb-2 mt-36">{listDessert.map((item)=>{   //flex-wrap flex items-center flex-row gap-2
           return <Product key={item.id} item={item} />
         })}
       </div>

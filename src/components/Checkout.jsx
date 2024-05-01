@@ -14,7 +14,7 @@ const Checkout = () => {
     <h1>CHECKOUT</h1>
     <div className='grid grid-cols-2 mt-6 pr-6'>
 
-    <div class="grid grid-cols-2 gap-4 ">
+    <div className="grid grid-cols-2 gap-4 ">
       <div className=''>Address</div>
         <select className="border-2 rounded-md border-black" >
           <option hidden></option>
@@ -38,7 +38,7 @@ const Checkout = () => {
       </select>     
     </div> 
 
-    <div class="grid grid-cols-2 gap-4 ">
+    <div className="grid grid-cols-2 gap-4 ">
       <div>Shipping</div> 
         <select className='border-2 rounded-md border-black'>
           <option hidden></option>

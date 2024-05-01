@@ -6,7 +6,6 @@ import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 import {toast} from "react-hot-toast";
 
-
 const Product = ({item})=>{
   const {cart} = useSelector((state)=>state.cart);
   let authUser= localStorage.getItem("sb-gizwpeatbfldniwqrmel-auth-token");//get item for any user, not just only this user
@@ -21,7 +20,7 @@ const Product = ({item})=>{
   return (
     <>
       <div>
-        <div className="rounded-lg shadow-lg hover:border-blue-600 hover:shadow-2xl pb-2 pt-2 ">
+        <div className="rounded-lg shadow-lg hover:border-blue-600 hover:shadow-2xl pb-2 pt-2 ">         
           <img className="h-72 w-72" src={item.image} />
           <p>{item.name}</p>
           <p>{item.price}</p>

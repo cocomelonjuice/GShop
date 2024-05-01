@@ -6,7 +6,8 @@ export const productList =  [
         type: "Tea",
         price: 25000,
         image: "https://phuclong.com.vn/uploads/dish/6a3bbf6dac792d-mangcaudaxay.png",
-        qty: 1
+        qty: 1,
+        description: "A great Tea"
     },
     {   id: 2,
         name: "Tea2",
@@ -14,6 +15,7 @@ export const productList =  [
         price: 35000,
         image: "https://phuclong.com.vn/uploads/dish/4ce1825cbd1978-trasuamc.png",
         qty: 1,
+        description: "A great Tea"
     },
     {   
         id: 3,
@@ -21,7 +23,8 @@ export const productList =  [
         type: "Tea",
         price: 50000,
         image: "https://phuclong.com.vn/uploads/dish/f48194a2a92877-luckytea.png",
-        qty: 1
+        qty: 1,
+        description: "A great Tea"
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ export const productList =  [
         type: "Tea",
         price: 55000,
         image: "https://phuclong.com.vn/uploads/dish/3937476a64a213-trophclong.png",
-        qty: 1
+        qty: 1,
+        description: "A great Tea"
     },
     
     {
@@ -38,7 +42,8 @@ export const productList =  [
         type: "Coffee",
         price: 30000,
         image: "https://phuclong.com.vn/uploads/dish/8a92bb4b37c012-cafe5mon01.png",
-        qty: 1
+        qty: 1,
+        description: "A great Coffee"
     },
     {
         id: 6,
@@ -46,7 +51,8 @@ export const productList =  [
         type: "Coffee",
         price: 35000,
         image: "https://phuclong.com.vn/uploads/dish/24d0961b7dba35-chocolatephclong.png",
-        qty: 1
+        qty: 1,
+        description: "A great Coffee"
     },
     {
         id: 7,
@@ -54,7 +60,8 @@ export const productList =  [
         type: "Coffee",
         price: 40000,
         image: "https://phuclong.com.vn/uploads/dish/4521f4c77fc38a-cf67efb06d5aa504fc4b.png",
-        qty: 1
+        qty: 1,
+        description: "A great Coffee"
     },
     {
         id: 8,
@@ -62,7 +69,8 @@ export const productList =  [
         type: "Coffee",
         price: 45000,
         image: "https://phuclong.com.vn/uploads/dish/8ebb07f0eeccc1-resize_damdadunggu07.png",
-        qty: 1
+        qty: 1,
+        description: "A great Coffee"
     },
     {
         id: 9,
@@ -70,7 +78,8 @@ export const productList =  [
         type: "Juice",
         price: 55000,
         image: "https://phuclong.com.vn/uploads/dish/37702760a2b2e3-65000309nhnxay.png",
-        qty: 1
+        qty: 1,
+        description: "A great Juice"
     },
 
     {
@@ -79,7 +88,8 @@ export const productList =  [
         type: "Juice",
         price: 55000,
         image: "https://phuclong.com.vn/uploads/dish/65a7d028c2229d-sachuaxoicthmphclong.png",
-        qty: 1
+        qty: 1,
+        description: "A great Juice"
     },
     {
         id: 11,
@@ -87,7 +97,8 @@ export const productList =  [
         type: "Juice",
         price: 55000,
         image: "https://phuclong.com.vn/uploads/dish/4136b3715bff3e-sachuaphcbntccamphclong.png",
-        qty: 1
+        qty: 1,
+        description: "A great Juice"
     },
 
     {
@@ -96,7 +107,8 @@ export const productList =  [
         type: "Juice",
         price: 55000,
         image: "https://phuclong.com.vn/uploads/dish/64bd44180be24c-sinhtchanh.png",
-        qty: 1
+        qty: 1,
+        description: "A great Juice"
     },
     {
         id: 13,
@@ -104,7 +116,8 @@ export const productList =  [
         type: "Bakery",
         price: 55000,
         image: "https://phuclong.com.vn/uploads/dish/61b22d5643fc80-img_67711.png",
-        qty: 1
+        qty: 1,
+        description: "A great Bread"
     },
     {
         id: 14,
@@ -112,7 +125,8 @@ export const productList =  [
         type: "Bakery",
         price: 55000,
         image: "https://phuclong.com.vn/uploads/dish/01b9696b860549-banhphap_0000s_0001_buttercroissant.jpg",
-        qty: 1
+        qty: 1,
+        description: "A great Bread"
     },
     {
         id: 15,
@@ -120,7 +134,8 @@ export const productList =  [
         type: "Dessert",
         price: 55000,
         image: "https://phuclong.com.vn/uploads/dish/774b3f1fd9202e-greenteachocolatecake.png",
-        qty: 1
+        qty: 1,
+        description: "A great Dessert"
     },
     {
         id: 16,
@@ -128,6 +143,7 @@ export const productList =  [
         type: "Dessert",
         price: 55000,
         image: "https://phuclong.com.vn/uploads/dish/a9686c8f36a908-passionpannacotta.png",
-        qty: 1
+        qty: 1,
+        description: "A great Dessert"
     },
 ]

@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import { productList } from '../ProductData';
-
-
 //cần intergrate SearchBar component này vào Navbar( thay thế hardcoded searchbar đang ở trên Navbar)
 //SearchBar có dạng dropdown list ( drop down từ thanh search, không cần hiển thị list filter này ở component khác ?)
 /*const Searchbar = () => {
