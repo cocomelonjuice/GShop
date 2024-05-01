@@ -1,11 +1,13 @@
 # Overview
 Overview:
+- Build Tool: Vite
 - Language: JavaScript
 - Library: ReactJS
 - Styling: TailwindCSS
-- State Management: React Hooks, Redux Toolkit, React-Query
+- Gobal State Management: React Hooks, Redux Toolkit, Tan Stack React-Query
 - Routing: React Router
 - Authorization & Authentication: Supabase
+  
 
 # Update log:
 13.01.2024: 
