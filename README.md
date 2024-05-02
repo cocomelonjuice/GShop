@@ -8,7 +8,7 @@ Overview:
 - Routing: React Router
 - Authorization & Authentication: Supabase
 Demo link: https://g-shop-orpin.vercel.app/
-(All images is from https://phuclong.com.vn/)
+(All images are from https://phuclong.com.vn/)
 
 # Update log:
 13.01.2024: 
