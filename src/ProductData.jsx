@@ -5,7 +5,7 @@ export const productList =  [
         name: "Tea1",
         type: "Tea",
         price: 25000,
-        image: "https://phuclong.com.vn/uploads/dish/6a3bbf6dac792d-mangcaudaxay.png",
+        image: "src/assets/image/Tea4.png",
         qty: 1,
         description: "A great Tea"
     },
@@ -13,7 +13,7 @@ export const productList =  [
         name: "Tea2",
         type: "Tea",
         price: 35000,
-        image: "https://phuclong.com.vn/uploads/dish/4ce1825cbd1978-trasuamc.png",
+        image: "src/assets/image/Tea2.png",
         qty: 1,
         description: "A great Tea"
     },
@@ -22,7 +22,7 @@ export const productList =  [
         name: "Tea3",
         type: "Tea",
         price: 50000,
-        image: "https://phuclong.com.vn/uploads/dish/f48194a2a92877-luckytea.png",
+        image: "src/assets/image/Tea3.png",
         qty: 1,
         description: "A great Tea"
     },
@@ -31,7 +31,7 @@ export const productList =  [
         name: "Tea4",
         type: "Tea",
         price: 55000,
-        image: "https://phuclong.com.vn/uploads/dish/3937476a64a213-trophclong.png",
+        image: "src/assets/image/Tea1.png",
         qty: 1,
         description: "A great Tea"
     },
@@ -41,7 +41,7 @@ export const productList =  [
         name: "Coffee1",
         type: "Coffee",
         price: 30000,
-        image: "https://phuclong.com.vn/uploads/dish/8a92bb4b37c012-cafe5mon01.png",
+        image: "src/assets/image/Coffee1.png",
         qty: 1,
         description: "A great Coffee"
     },
@@ -50,7 +50,7 @@ export const productList =  [
         name: "Coffee2",
         type: "Coffee",
         price: 35000,
-        image: "https://phuclong.com.vn/uploads/dish/24d0961b7dba35-chocolatephclong.png",
+        image: "src/assets/image/Coffee2.png",
         qty: 1,
         description: "A great Coffee"
     },
@@ -59,7 +59,7 @@ export const productList =  [
         name: "Coffee3",
         type: "Coffee",
         price: 40000,
-        image: "https://phuclong.com.vn/uploads/dish/4521f4c77fc38a-cf67efb06d5aa504fc4b.png",
+        image: "src/assets/image/Coffee3.png",
         qty: 1,
         description: "A great Coffee"
     },
@@ -68,7 +68,7 @@ export const productList =  [
         name: "Coffee4",
         type: "Coffee",
         price: 45000,
-        image: "https://phuclong.com.vn/uploads/dish/8ebb07f0eeccc1-resize_damdadunggu07.png",
+        image: "src/assets/image/Coffee4.png",
         qty: 1,
         description: "A great Coffee"
     },
@@ -77,7 +77,7 @@ export const productList =  [
         name: "Juice1",
         type: "Juice",
         price: 55000,
-        image: "https://phuclong.com.vn/uploads/dish/37702760a2b2e3-65000309nhnxay.png",
+        image: "src/assets/image/Juice1.png",
         qty: 1,
         description: "A great Juice"
     },
@@ -87,7 +87,7 @@ export const productList =  [
         name: "Juice2",
         type: "Juice",
         price: 55000,
-        image: "https://phuclong.com.vn/uploads/dish/65a7d028c2229d-sachuaxoicthmphclong.png",
+        image: "src/assets/image/Juice2.png",
         qty: 1,
         description: "A great Juice"
     },
@@ -96,7 +96,7 @@ export const productList =  [
         name: "Juice3",
         type: "Juice",
         price: 55000,
-        image: "https://phuclong.com.vn/uploads/dish/4136b3715bff3e-sachuaphcbntccamphclong.png",
+        image: "src/assets/image/Juice3.png",
         qty: 1,
         description: "A great Juice"
     },
@@ -106,7 +106,7 @@ export const productList =  [
         name: "Juice4",
         type: "Juice",
         price: 55000,
-        image: "https://phuclong.com.vn/uploads/dish/64bd44180be24c-sinhtchanh.png",
+        image: "src/assets/image/Juice4.png",
         qty: 1,
         description: "A great Juice"
     },
@@ -115,7 +115,7 @@ export const productList =  [
         name: "Bakery1",
         type: "Bakery",
         price: 55000,
-        image: "https://phuclong.com.vn/uploads/dish/61b22d5643fc80-img_67711.png",
+        image: "src/assets/image/Bakery1.png",
         qty: 1,
         description: "A great Bread"
     },
@@ -124,7 +124,7 @@ export const productList =  [
         name: "Bakery2",
         type: "Bakery",
         price: 55000,
-        image: "https://phuclong.com.vn/uploads/dish/01b9696b860549-banhphap_0000s_0001_buttercroissant.jpg",
+        image: "src/assets/image/Bakery2.png",
         qty: 1,
         description: "A great Bread"
     },
@@ -133,7 +133,7 @@ export const productList =  [
         name: "Dessert1",
         type: "Dessert",
         price: 55000,
-        image: "https://phuclong.com.vn/uploads/dish/774b3f1fd9202e-greenteachocolatecake.png",
+        image: "src/assets/image/Dessert1.png",
         qty: 1,
         description: "A great Dessert"
     },
@@ -142,7 +142,7 @@ export const productList =  [
         name: "Dessert2",
         type: "Dessert",
         price: 55000,
-        image: "https://phuclong.com.vn/uploads/dish/a9686c8f36a908-passionpannacotta.png",
+        image: "src/assets/image/Dessert2.png",
         qty: 1,
         description: "A great Dessert"
     },
