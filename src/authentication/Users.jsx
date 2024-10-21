@@ -1,11 +1,11 @@
 import SignUpForm from "./SignUpForm";
 
-function NewUsers(){
+function NewUsers() {
   return (
     <>
-        <SignUpForm></SignUpForm>
+      <SignUpForm></SignUpForm>
     </>
-  )
+  );
 }
 
 export default NewUsers;
