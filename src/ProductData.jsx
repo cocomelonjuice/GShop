@@ -1,4 +1,4 @@
-import Tea4  from "../assets/image/Tea4.png";
+import Tea4  from "../src/assets/image/Tea4.png";
 
 export const productList = [
   {
