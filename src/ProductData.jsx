@@ -1,10 +1,12 @@
+import Tea4  from "../assets/image/Tea4.png";
+
 export const productList = [
   {
     id: 1,
     name: "Tea1",
     type: "Tea",
     price: 25000,
-    image: "src/assets/image/Tea4.png",
+    image: Tea4,
     qty: 1,
     description: "A great Tea",
   },
