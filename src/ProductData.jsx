@@ -48,7 +48,7 @@ export const productList = [
     name: "Tea4",
     type: "Tea",
     price: 55000,
-    image: Tea4,
+    image: Tea1,
     qty: 1,
     description: "A great Tea",
   },
