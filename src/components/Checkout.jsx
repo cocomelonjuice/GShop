@@ -56,7 +56,6 @@ const Checkout = () => {
       </div>
 
       <div>
-        <div className="mt-2">----------------------------------------</div>
         <div className="mt-2">Order total price: {cartTotalAmount}</div>
       </div>
       <button className="m-auto mt-2 hover:bg-red-600 bg-red-400 w-fit px-2 py-2 rounded-lg text-white">
